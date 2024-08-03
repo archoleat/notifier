@@ -1,3 +1,1 @@
-const message = async (string: string) => string;
-
-export { message };
+export { error, info, success, warning } from '#features';
