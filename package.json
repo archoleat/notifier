@@ -22,7 +22,8 @@
     "node-notifier",
     "node-notify",
     "notifier",
-    "notify"
+    "notify",
+    "plugin"
   ],
   "packageManager": "pnpm@9.4.0",
   "engines": {
