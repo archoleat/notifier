@@ -9,17 +9,25 @@ import alias from '@rollup/plugin-alias';
 import typescript from '@rollup/plugin-typescript';
 
 const sourceFolder = 'src';
+const featuresFolder = `${sourceFolder}/features`;
+const sharedFolder = `${sourceFolder}/shared`;
+const typesFolder = `${sharedFolder}/types`;
+
 const fileName = 'index';
 const indexFile = `${fileName}.ts`;
+const declarationFile = `${fileName}.d.ts`;
+const outputFile = `${fileName}.js`;
+
+const fileFormat = 'es';
 
 export default defineConfig([
   {
-    external: ['chalk'],
+    external: ['chalk', 'node-notifier'],
     plugins: [typescript(), minify()],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: `${fileName}.js`,
-      format: 'es',
+      file: outputFile,
+      format: fileFormat,
     },
   },
   {
@@ -28,15 +36,15 @@ export default defineConfig([
         entries: [
           {
             find: '#features',
-            replacement: resolve(`${sourceFolder}/features/${indexFile}`),
+            replacement: resolve(`${featuresFolder}/${indexFile}`),
           },
           {
             find: '#shared',
-            replacement: resolve(`${sourceFolder}/shared/${indexFile}`),
+            replacement: resolve(`${sharedFolder}/${indexFile}`),
           },
           {
             find: '#types',
-            replacement: resolve(`${sourceFolder}/shared/types/${fileName}.d.ts`),
+            replacement: resolve(`${sharedFolder}/${declarationFile}`),
           },
         ],
       }),
@@ -44,8 +52,8 @@ export default defineConfig([
     ],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: `${fileName}.d.ts`,
-      format: 'es',
+      file: declarationFile,
+      format: fileFormat,
     },
   },
 ]);
