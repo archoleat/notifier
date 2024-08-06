@@ -3,7 +3,7 @@ import { notifier } from './notifier/index.ts';
 
 import type { Parameters } from '#types';
 
-const elector = (parameters: Parameters) => {
+const elector = async (parameters: Parameters) => {
   const { message, icon, title, notificationMode } = parameters;
 
   if (notificationMode === 'console') {

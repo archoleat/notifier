@@ -2,7 +2,7 @@ import { elector } from '#shared';
 
 import type { Parameters } from '#types';
 
-const warning = (parameters: Parameters) => {
+const warning = async (parameters: Parameters) => {
   const {
     message,
     icon = './icons/warning.png',

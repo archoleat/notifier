@@ -2,7 +2,7 @@ import { elector } from '#shared';
 
 import type { Parameters } from '#types';
 
-const info = (parameters: Parameters) => {
+const info = async (parameters: Parameters) => {
   const {
     message,
     icon = './icons/info.png',
