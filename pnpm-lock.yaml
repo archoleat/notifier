@@ -8,25 +8,16 @@ importers:
 
   .:
     dependencies:
-      '@rollup/plugin-sucrase':
-        specifier: ^5.0.2
-        version: 5.0.2(rollup@4.20.0)
-      '@types/node':
-        specifier: ^22.1.0
-        version: 22.1.0
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
       node-notifier:
         specifier: ^10.0.1
         version: 10.0.1
-      rollup-plugin-copy:
-        specifier: ^3.5.0
-        version: 3.5.0
     devDependencies:
       '@archoleat/commitlint-define-config':
-        specifier: ^1.0.7
-        version: 1.0.7
+        specifier: ^1.0.8
+        version: 1.0.8(@commitlint/cli@19.3.0(@types/node@22.1.0)(typescript@5.5.4))(@commitlint/config-conventional@19.2.2)(@commitlint/types@19.0.3)
       '@archoleat/eslint-flat-compatibility':
         specifier: ^1.1.6
         version: 1.1.6
@@ -45,6 +36,9 @@ importers:
       '@rollup/plugin-alias':
         specifier: ^5.1.0
         version: 5.1.0(rollup@4.20.0)
+      '@rollup/plugin-sucrase':
+        specifier: ^5.0.2
+        version: 5.0.2(rollup@4.20.0)
       '@rollup/plugin-typescript':
         specifier: ^11.1.6
         version: 11.1.6(rollup@4.20.0)(tslib@2.6.3)(typescript@5.5.4)
@@ -54,6 +48,9 @@ importers:
       '@semantic-release/git':
         specifier: ^10.0.1
         version: 10.0.1(semantic-release@24.0.0(typescript@5.5.4))
+      '@types/node':
+        specifier: ^22.1.0
+        version: 22.1.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
@@ -126,6 +123,9 @@ importers:
       rollup:
         specifier: ^4.20.0
         version: 4.20.0
+      rollup-plugin-copy:
+        specifier: ^3.5.0
+        version: 3.5.0
       rollup-plugin-dts:
         specifier: ^6.1.1
         version: 6.1.1(rollup@4.20.0)(typescript@5.5.4)
@@ -148,9 +148,13 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@archoleat/commitlint-define-config@1.0.7':
-    resolution: {integrity: sha512-2ekyjrJFJDk2t+13O65mmlekiZypGDnh7VXSq6fk4X9jExx4LQ7BgQSEEMS4DpM0ce3vjtAgQejEHyS9bzDyWA==}
-    engines: {node: '>=20.0.0', npm: '>=10.0.0', pnpm: '>=8.0.0'}
+  '@archoleat/commitlint-define-config@1.0.8':
+    resolution: {integrity: sha512-z00JsmPSnOznxED6HtlEdR50IPYv+3LLuwWx9dkCCm6IL1XW5C7WwkcUv+LNHynznvorVBAirgJJclqD6Fu4gQ==}
+    engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
+    peerDependencies:
+      '@commitlint/cli': ^19.0.0
+      '@commitlint/config-conventional': ^19.0.0
+      '@commitlint/types': ^19.0.0
 
   '@archoleat/eslint-flat-compatibility@1.1.6':
     resolution: {integrity: sha512-gu8PQv6hWh2DEm2FONtAPDvv1odZXCADshCyvouYzFNscEgMLW0zwbfv6d6pAlsk7uY9+V05R/tz0qv0Sy4mzg==}
@@ -4105,8 +4109,10 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@archoleat/commitlint-define-config@1.0.7':
+  '@archoleat/commitlint-define-config@1.0.8(@commitlint/cli@19.3.0(@types/node@22.1.0)(typescript@5.5.4))(@commitlint/config-conventional@19.2.2)(@commitlint/types@19.0.3)':
     dependencies:
+      '@commitlint/cli': 19.3.0(@types/node@22.1.0)(typescript@5.5.4)
+      '@commitlint/config-conventional': 19.2.2
       '@commitlint/types': 19.0.3
 
   '@archoleat/eslint-flat-compatibility@1.1.6':
