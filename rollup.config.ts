@@ -6,27 +6,38 @@ import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
 
 import alias from '@rollup/plugin-alias';
+import sucrase from '@rollup/plugin-sucrase';
 import typescript from '@rollup/plugin-typescript';
 
+import copy from 'rollup-plugin-copy';
+
 const sourceFolder = 'src';
+const destinationFolder = 'dist';
 const featuresFolder = `${sourceFolder}/features`;
+const iconsFolder = `${sourceFolder}/icons`;
 const sharedFolder = `${sourceFolder}/shared`;
 const typesFolder = `${sharedFolder}/types`;
 
 const fileName = 'index';
+const fileFormat = 'es';
+
 const indexFile = `${fileName}.ts`;
 const declarationFile = `${fileName}.d.ts`;
 const outputFile = `${fileName}.js`;
 
-const fileFormat = 'es';
-
 export default defineConfig([
   {
     external: ['chalk', 'node-notifier'],
-    plugins: [typescript(), minify()],
+    plugins: [
+      copy({
+        targets: [{ src: `${iconsFolder}/*`, dest: `${destinationFolder}/icons` }],
+      }),
+      typescript(),
+      minify(),
+    ],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: outputFile,
+      file: `${destinationFolder}/${outputFile}`,
       format: fileFormat,
     },
   },
@@ -44,15 +55,16 @@ export default defineConfig([
           },
           {
             find: '#types',
-            replacement: resolve(`${sharedFolder}/${declarationFile}`),
+            replacement: resolve(`${typesFolder}/${declarationFile}`),
           },
         ],
       }),
+      sucrase({ transforms: ['typescript'] }),
       dts(),
     ],
     input: `${sourceFolder}/${indexFile}`,
     output: {
-      file: declarationFile,
+      file: `${destinationFolder}/${declarationFile}`,
       format: fileFormat,
     },
   },

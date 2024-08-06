@@ -1,1 +1,1 @@
-export { instance } from './chalk.ts';
+export { elector } from './elector.ts';

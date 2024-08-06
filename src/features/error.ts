@@ -1,11 +1,16 @@
-import { instance } from '#shared';
+import { elector } from '#shared';
 
 import type { Parameters } from '#types';
 
 const error = (parameters: Parameters) => {
-  const { message } = parameters;
+  const {
+    message,
+    icon = './icons/error.png',
+    title = 'ERROR',
+    notificationMode = 'console',
+  } = parameters;
 
-  return console.error(instance.red(message));
+  return elector({ message, icon, title, notificationMode });
 };
 
 export { error };

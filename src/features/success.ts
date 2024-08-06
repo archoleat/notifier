@@ -1,11 +1,16 @@
-import { instance } from '#shared';
+import { elector } from '#shared';
 
 import type { Parameters } from '#types';
 
 const success = (parameters: Parameters) => {
-  const { message } = parameters;
+  const {
+    message,
+    icon = './icons/success.png',
+    title = 'SUCCESS',
+    notificationMode = 'console',
+  } = parameters;
 
-  return console.log(instance.green(message));
+  return elector({ message, icon, title, notificationMode });
 };
 
 export { success };
