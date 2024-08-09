@@ -1,6 +1,6 @@
 {
-  "name": "@archoleat/repo-template",
-  "description": "Repository template",
+  "name": "@archoleat/notifier",
+  "description": "Simple notifier for plugins or bundlers",
   "version": "1.0.0",
   "license": "MIT",
   "author": {
@@ -8,16 +8,22 @@
     "name": "Archoleat",
     "url": "https://github.com/archoleat"
   },
-  "homepage": "https://github.com/archoleat/repo-template#readme",
+  "homepage": "https://github.com/archoleat/notifier#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/archoleat/repo-template.git"
+    "url": "git+https://github.com/archoleat/notifier.git"
   },
   "bugs": {
-    "url": "https://github.com/archoleat/repo-template/issues"
+    "url": "https://github.com/archoleat/notifier/issues"
   },
   "keywords": [
-    "repo-template"
+    "archoleat-notifier",
+    "archoleat",
+    "node-notifier",
+    "node-notify",
+    "notifier",
+    "notify",
+    "plugin"
   ],
   "packageManager": "pnpm@9.4.0",
   "engines": {
@@ -31,19 +37,22 @@
   "type": "module",
   "types": "index.d.ts",
   "imports": {
-    "#src": "./src/index.ts"
+    "#features": "./src/features/index.ts",
+    "#shared": "./src/shared/index.ts",
+    "#types": "./src/shared/types/index.d.ts"
   },
   "exports": {
-    ".": "./index.js"
+    ".": "./dist/index.js",
+    "./index.d.ts": "./dist/index.d.ts"
   },
   "files": [
-    "index.d.ts",
-    "index.js"
+    "dist"
   ],
   "scripts": {
     "init": "pnpm i && husky",
     "spec": "vitest",
     "spec:coverage": "vitest run --coverage",
+    "build": "rollup -c rollup.config.ts --configPlugin typescript",
     "release": "semantic-release",
     "lint:editorconfig": "editorconfig-checker",
     "lint:formatting": "prettier . --check",
@@ -52,15 +61,24 @@
     "prettify": "prettier . --write",
     "commit": "cz"
   },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "node-notifier": "^10.0.1"
+  },
   "devDependencies": {
-    "@archoleat/commitlint-define-config": "^1.0.7",
+    "@archoleat/commitlint-define-config": "^1.0.8",
     "@archoleat/eslint-flat-compatibility": "^1.1.6",
-    "@archoleat/semantic-release-define-config": "^1.1.8",
+    "@archoleat/prettier-define-config": "^1.0.0",
+    "@archoleat/semantic-release-define-config": "^1.1.12",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/types": "^19.0.3",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-sucrase": "^5.0.2",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@types/node": "^22.1.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vitest/coverage-v8": "^2.0.5",
@@ -77,13 +95,17 @@
     "git-pull-run": "^1.4.0",
     "globals": "^15.9.0",
     "husky": "^9.1.4",
-    "lint-staged": "^15.2.7",
+    "lint-staged": "^15.2.8",
     "prettier": "^3.3.3",
     "remark": "15.0.1",
     "remark-cli": "^12.0.1",
     "remark-preset-lint-consistent": "^6.0.0",
     "remark-preset-lint-markdown-style-guide": "^6.0.0",
     "remark-preset-lint-recommended": "^7.0.0",
+    "rollup": "^4.20.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
     "semantic-release": "^24.0.0",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
