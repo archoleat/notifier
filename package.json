@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/notifier",
-  "description": "Simple notifier for Node.JS plugins or Bundlers",
+  "description": "Simple notifier for plugins or bundlers",
   "version": "1.0.0",
   "license": "MIT",
   "author": {
