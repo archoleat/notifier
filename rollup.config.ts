@@ -11,18 +11,18 @@ import typescript from '@rollup/plugin-typescript';
 
 import copy from 'rollup-plugin-copy';
 
-const sourceFolder = 'src';
 const destinationFolder = 'dist';
+const sourceFolder = 'src';
 const featuresFolder = `${sourceFolder}/features`;
 const iconsFolder = `${sourceFolder}/icons`;
 const sharedFolder = `${sourceFolder}/shared`;
 const typesFolder = `${sharedFolder}/types`;
 
-const fileName = 'index';
 const fileFormat = 'es';
+const fileName = 'index';
 
-const indexFile = `${fileName}.ts`;
 const declarationFile = `${fileName}.d.ts`;
+const indexFile = `${fileName}.ts`;
 const outputFile = `${fileName}.js`;
 
 export default defineConfig([
