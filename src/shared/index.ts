@@ -1,1 +1,1 @@
-export { elector } from './elector.ts';
+export { elector } from './elector/index.ts';

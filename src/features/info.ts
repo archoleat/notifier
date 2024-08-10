@@ -5,12 +5,19 @@ import type { Parameters } from '#types';
 const info = async (parameters: Parameters) => {
   const {
     message,
-    icon = './icons/info.png',
-    title = 'INFO',
     notificationMode = 'console',
+    hasTime = true,
+    messageLength = 80,
   } = parameters;
 
-  return elector({ message, icon, title, notificationMode });
+  return await elector({
+    message,
+    notificationMode,
+    hasTime,
+    messageLength,
+    icon: './icons/info.png',
+    title: 'INFO',
+  });
 };
 
 export { info };

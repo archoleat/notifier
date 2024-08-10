@@ -23,7 +23,7 @@
 
 ```shell
 # bun
-bun i -D @archoleat/commitlint-define-config
+bun i -D @archoleat/notifier
 ```
 
 ```shell
