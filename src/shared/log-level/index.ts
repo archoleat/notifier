@@ -8,7 +8,9 @@ import type { Parameters } from './parameters.d.ts';
 const logLevel = async (parameters: Parameters) => {
   const { message, title, hasTime, messageLength = 80 } = parameters;
 
-  const notification = `${hasTime ? `${chalk.white(currentTime())} ` : ''}[${title}] ${maxMessageLength({ message, messageLength })}`;
+  const time = hasTime ? `${chalk.white(currentTime())} ` : '';
+  const body = maxMessageLength({ message, messageLength });
+  const notification = `${time}[${title}] ${body}`;
 
   if (title === 'ERROR') {
     return console.error(chalk.red(notification));
