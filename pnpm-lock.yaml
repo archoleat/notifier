@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@archoleat/commitlint-define-config':
-        specifier: ^1.0.7
-        version: 1.0.7
+        specifier: ^1.0.9
+        version: 1.0.9(@commitlint/cli@19.3.0(@types/node@22.0.0)(typescript@5.5.4))(@commitlint/config-conventional@19.2.2)(@commitlint/types@19.0.3)
       '@archoleat/eslint-flat-compatibility':
         specifier: ^1.1.6
         version: 1.1.6
@@ -117,9 +117,13 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@archoleat/commitlint-define-config@1.0.7':
-    resolution: {integrity: sha512-2ekyjrJFJDk2t+13O65mmlekiZypGDnh7VXSq6fk4X9jExx4LQ7BgQSEEMS4DpM0ce3vjtAgQejEHyS9bzDyWA==}
-    engines: {node: '>=20.0.0', npm: '>=10.0.0', pnpm: '>=8.0.0'}
+  '@archoleat/commitlint-define-config@1.0.9':
+    resolution: {integrity: sha512-Sb5WuLgiOEJX81lKGdk/7BvP7uUkRzDMNRGlSuWK4zJ86Dh1S9ouWTwA2hykl2eKXx7tTzCcoT1WUfarujKyWQ==}
+    engines: {node: '>=20.0.0', pnpm: '>=9.0.0'}
+    peerDependencies:
+      '@commitlint/cli': ^19.0.0
+      '@commitlint/config-conventional': ^19.0.0
+      '@commitlint/types': ^19.0.0
 
   '@archoleat/eslint-flat-compatibility@1.1.6':
     resolution: {integrity: sha512-gu8PQv6hWh2DEm2FONtAPDvv1odZXCADshCyvouYzFNscEgMLW0zwbfv6d6pAlsk7uY9+V05R/tz0qv0Sy4mzg==}
@@ -3942,8 +3946,10 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@archoleat/commitlint-define-config@1.0.7':
+  '@archoleat/commitlint-define-config@1.0.9(@commitlint/cli@19.3.0(@types/node@22.0.0)(typescript@5.5.4))(@commitlint/config-conventional@19.2.2)(@commitlint/types@19.0.3)':
     dependencies:
+      '@commitlint/cli': 19.3.0(@types/node@22.0.0)(typescript@5.5.4)
+      '@commitlint/config-conventional': 19.2.2
       '@commitlint/types': 19.0.3
 
   '@archoleat/eslint-flat-compatibility@1.1.6':
