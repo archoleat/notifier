@@ -52,5 +52,5 @@ jobs:
       - name: Upload CodeQL Analysis
         uses: actions/upload-artifact@v3
         with:
-          name: go.sarif
-          path: ${{ github.workspace }}/results/go.sarif
+          name: ${{ matrix.language }}.sarif
+          path: ${{ github.workspace }}/results/${{ matrix.language }}.sarif
