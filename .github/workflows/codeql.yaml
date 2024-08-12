@@ -50,7 +50,7 @@ jobs:
           category: /language:${{ matrix.language }}
 
       - name: Upload CodeQL Analysis
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.language }}.sarif
           path: ${{ github.workspace }}/results/${{ matrix.language }}.sarif
