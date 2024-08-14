@@ -8,25 +8,26 @@ import type { Parameters } from './parameters.d.ts';
 const logLevel = async (parameters: Parameters) => {
   const { message, title, hasTime, messageLength = 80 } = parameters;
 
-  const time = hasTime ? `${chalk.white(currentTime())} ` : '';
-  const body = maxMessageLength({ message, messageLength });
-  const notification = `${time}[${title}] ${body}`;
+  const generateNotification = async () => {
+    const time = hasTime ? `${chalk.white(await currentTime())} ` : '';
+    const body = await maxMessageLength({ message, messageLength });
+
+    return `${time}[${title}] ${body}`;
+  };
 
   if (title === 'ERROR') {
-    return console.error(chalk.red(notification));
+    return console.error(chalk.red(await generateNotification()));
   }
 
   if (title === 'WARNING') {
-    return console.warn(chalk.yellow(notification));
+    return console.warn(chalk.yellow(await generateNotification()));
   }
 
   if (title === 'SUCCESS') {
-    return console.log(chalk.green(notification));
+    return console.log(chalk.green(await generateNotification()));
   }
 
-  if (title === 'INFO') {
-    return console.info(chalk.blue(notification));
-  }
+  return console.info(chalk.blue(await generateNotification()));
 };
 
 export { logLevel };

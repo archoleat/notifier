@@ -1,6 +1,6 @@
 import type { Parameters } from './parameters.d.ts';
 
-const maxMessageLength = (parameters: Parameters) => {
+const maxMessageLength = async (parameters: Parameters) => {
   const { message, messageLength = 80 } = parameters;
 
   if (message.length > messageLength) {

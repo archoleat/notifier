@@ -10,7 +10,7 @@ const error = async (parameters: Parameters) => {
     messageLength = 80,
   } = parameters;
 
-  return await elector({
+  return elector({
     message,
     notificationMode,
     hasTime,

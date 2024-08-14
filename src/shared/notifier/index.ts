@@ -9,7 +9,7 @@ const notifier = async (parameters: Parameters) => {
   const { message, icon, title, messageLength = 80 } = parameters;
 
   return Notifier.notify({
-    message: maxMessageLength({ message, messageLength }),
+    message: await maxMessageLength({ message, messageLength }),
     icon,
     title,
   });

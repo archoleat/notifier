@@ -14,19 +14,17 @@ const elector = async (parameters: Parameters) => {
   } = parameters;
 
   if (notificationMode === 'console') {
-    return await logLevel({ message, title, hasTime, messageLength });
+    return logLevel({ message, title, hasTime, messageLength });
   }
 
   if (notificationMode === 'desktop') {
-    return await notifier({ message, icon, title, messageLength });
+    return notifier({ message, icon, title, messageLength });
   }
 
-  if (notificationMode === 'multiple') {
-    return [
-      await logLevel({ message, title, hasTime, messageLength }),
-      await notifier({ message, icon, title, messageLength }),
-    ];
-  }
+  return [
+    await logLevel({ message, title, hasTime, messageLength }),
+    await notifier({ message, icon, title, messageLength }),
+  ];
 };
 
 export { elector };

@@ -1,3 +1,3 @@
-const currentTime = () => new Date().toLocaleTimeString();
+const currentTime = async () => new Date().toLocaleTimeString();
 
 export { currentTime };
