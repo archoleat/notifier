@@ -5,16 +5,16 @@ import type { Parameters } from '#types';
 const error = async (parameters: Parameters) => {
   const {
     message,
-    notificationMode = 'console',
     hasTime = true,
     messageLength = 80,
+    notificationMode = 'console',
   } = parameters;
 
   return elector({
     message,
-    notificationMode,
     hasTime,
     messageLength,
+    notificationMode,
     icon: './icons/error.png',
     title: 'ERROR',
   });

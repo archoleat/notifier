@@ -1,8 +1,8 @@
 type Parameters = {
   message: string;
-  notificationMode?: 'console' | 'desktop' | 'multiple';
   hasTime?: boolean;
   messageLength?: number;
+  notificationMode?: 'console' | 'desktop' | 'multiple';
 };
 
 export { Parameters };

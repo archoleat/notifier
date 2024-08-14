@@ -8,9 +8,9 @@ const elector = async (parameters: Parameters) => {
     message,
     icon,
     title,
-    notificationMode = 'console',
     hasTime = true,
     messageLength = 80,
+    notificationMode = 'console',
   } = parameters;
 
   if (notificationMode === 'console') {

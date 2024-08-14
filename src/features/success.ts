@@ -5,16 +5,16 @@ import type { Parameters } from '#types';
 const success = async (parameters: Parameters) => {
   const {
     message,
-    notificationMode = 'console',
     hasTime = true,
     messageLength = 80,
+    notificationMode = 'console',
   } = parameters;
 
   return elector({
     message,
-    notificationMode,
     hasTime,
     messageLength,
+    notificationMode,
     icon: './icons/success.png',
     title: 'SUCCESS',
   });
