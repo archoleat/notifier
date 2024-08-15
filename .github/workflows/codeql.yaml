@@ -30,7 +30,8 @@ jobs:
       fail-fast: false
 
       matrix:
-        language: [javascript, typescript]
+        language:
+          - javascript-typescript
 
     steps:
       - name: Checkout Repository
@@ -48,9 +49,3 @@ jobs:
         uses: github/codeql-action/analyze@v3
         with:
           category: /language:${{ matrix.language }}
-
-      - name: Upload CodeQL Analysis
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.language }}.sarif
-          path: ${{ github.workspace }}/results/${{ matrix.language }}.sarif

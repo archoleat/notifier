@@ -46,17 +46,12 @@ yarn add -D @archoleat/notifier
 ```js
 import { error, info, success, warning } from '@archoleat/notifier';
 
-// returns: info message, color text: blue
-info('info message');
-
-// returns: success message, color text: green
-success('success message', 'second message');
-
-// returns: warning message, color text: yellow
-warning('warning message');
-
-// returns: error message, color text: red
-error('error message');
+await info({
+  message: 'your message',
+  hasTime: true, // Enable/disable time, not work in desktop mode. default true
+  messageLength: 80, // Sets the length of the message. default 80
+  notificationMode: 'console' | 'desktop' | 'multiple', // default console
+});
 ```
 
 ## Contributing
