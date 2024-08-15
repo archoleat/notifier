@@ -5,14 +5,14 @@ on:
     branches:
       - main
     paths:
-      - package.json
-      - src/index.ts
+      - src/**/*.ts
+      - src/**/*.d.ts
   push:
     branches:
       - main
     paths:
-      - package.json
-      - src/index.ts
+      - src/**/*.ts
+      - src/**/*.d.ts
 
 permissions:
   actions: read
@@ -45,7 +45,7 @@ jobs:
       - name: Auto Build
         uses: github/codeql-action/autobuild@v3
 
-      - name: Perform Analysis
+      - name: Perform Code Analysis
         uses: github/codeql-action/analyze@v3
         with:
           category: /language:${{ matrix.language }}
