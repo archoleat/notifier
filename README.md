@@ -47,10 +47,20 @@ yarn add -D @archoleat/notifier
 import { error, info, success, warning } from '@archoleat/notifier';
 
 await info({
-  message: 'your message',
-  hasTime: true, // Enable/disable time, not work in desktop mode. default true
-  messageLength: 80, // Sets the length of the message. default 80
-  notificationMode: 'console' | 'desktop' | 'multiple', // default console
+  message: [
+    'your message',
+
+    // Truncates the message after a specified number of characters.
+    /** @default Infinity */
+    { length: Infinity },
+  ],
+
+  // Enable/disable time, not work in desktop mode.
+  /** @default true */
+  hasTime: true,
+
+  /** @default 'console' */
+  notificationMode: 'console' | 'desktop' | 'multiple',
 });
 ```
 

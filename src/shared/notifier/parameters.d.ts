@@ -1,8 +1,9 @@
+import type { Message } from '#types';
+
 type Parameters = {
-  message: string;
   icon: string;
   title: string;
-  messageLength?: number;
+  message: Message;
 };
 
 export { Parameters };

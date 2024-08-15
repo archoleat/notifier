@@ -1,7 +1,8 @@
+import type { Message } from './message.d.ts';
+
 type Parameters = {
-  message: string;
+  message: Message;
   hasTime?: boolean;
-  messageLength?: number;
   notificationMode?: 'console' | 'desktop' | 'multiple';
 };
 

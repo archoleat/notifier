@@ -1,17 +1,17 @@
 // @ts-ignore
 import Notifier from 'node-notifier';
 
-import { maxMessageLength } from '../max-message-length/index.ts';
+import { truncate } from '../truncate/index.ts';
 
 import type { Parameters } from './parameters.d.ts';
 
 const notifier = async (parameters: Parameters) => {
-  const { message, icon, title, messageLength = 80 } = parameters;
+  const { icon, message, title } = parameters;
 
   return Notifier.notify({
-    message: await maxMessageLength({ message, messageLength }),
-    icon,
     title,
+    icon: `dist/icons/${icon}.png`,
+    message: await truncate({ message }),
   });
 };
 

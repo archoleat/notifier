@@ -1,10 +1,11 @@
+import type { Message } from '#types';
+
 type Parameters = {
-  message: string;
+  message: Message;
   icon: string;
   title: string;
   notificationMode?: 'console' | 'desktop' | 'multiple';
   hasTime?: boolean;
-  messageLength?: number;
 };
 
 export { Parameters };

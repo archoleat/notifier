@@ -1,16 +1,16 @@
 import chalk from 'chalk';
 
 import { currentTime } from '../current-time.ts';
-import { maxMessageLength } from '../max-message-length/index.ts';
+import { truncate } from '../truncate/index.ts';
 
 import type { Parameters } from './parameters.d.ts';
 
 const logLevel = async (parameters: Parameters) => {
-  const { message, title, hasTime, messageLength = 80 } = parameters;
+  const { message, title, hasTime } = parameters;
 
   const generateNotification = async () => {
     const time = hasTime ? `${chalk.white(await currentTime())} ` : '';
-    const body = await maxMessageLength({ message, messageLength });
+    const body = await truncate({ message });
 
     return `${time}[${title}] ${body}`;
   };

@@ -5,25 +5,24 @@ import type { Parameters } from './parameters.d.ts';
 
 const elector = async (parameters: Parameters) => {
   const {
-    message,
     icon,
+    message,
     title,
     hasTime = true,
-    messageLength = 80,
     notificationMode = 'console',
   } = parameters;
 
   if (notificationMode === 'console') {
-    return logLevel({ message, title, hasTime, messageLength });
+    return logLevel({ message, title, hasTime });
   }
 
   if (notificationMode === 'desktop') {
-    return notifier({ message, icon, title, messageLength });
+    return notifier({ message, icon, title });
   }
 
   return [
-    await logLevel({ message, title, hasTime, messageLength }),
-    await notifier({ message, icon, title, messageLength }),
+    await logLevel({ message, title, hasTime }),
+    await notifier({ message, icon, title }),
   ];
 };
 

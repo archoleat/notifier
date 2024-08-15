@@ -3,19 +3,13 @@ import { elector } from '#shared';
 import type { Parameters } from '#types';
 
 const error = async (parameters: Parameters) => {
-  const {
-    message,
-    hasTime = true,
-    messageLength = 80,
-    notificationMode = 'console',
-  } = parameters;
+  const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
   return elector({
     message,
     hasTime,
-    messageLength,
     notificationMode,
-    icon: './icons/error.png',
+    icon: 'error',
     title: 'ERROR',
   });
 };
