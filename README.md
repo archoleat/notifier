@@ -19,32 +19,24 @@
 - [Contributing](#contributing)
 - [License](#license)
 
+A small, simple and customizable notifier for your projects.
+
 ## Installation
 
 ```shell
-# bun
 bun i -D @archoleat/notifier
-```
-
-```shell
-# pnpm
-pnpm i -D @archoleat/notifier
-```
-
-```shell
-# npm
-npm i -D @archoleat/notifier
-```
-
-```shell
-# yarn
-yarn add -D @archoleat/notifier
 ```
 
 ## Usage
 
 ```js
-import { error, info, success, warning } from '@archoleat/notifier';
+import { error, info, success, warning, debug } from '@archoleat/notifier';
+
+// In the debug function you can only specify the message and its length.
+// Only work in console mode.
+await debug({
+  message: ['your message'],
+});
 
 await info({
   message: [

@@ -1,1 +1,1 @@
-export { error, info, success, warning } from '#features';
+export { debug, error, info, success, warning } from '#features';

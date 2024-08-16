@@ -4,8 +4,8 @@ type Parameters = {
   message: Message;
   icon: string;
   title: string;
-  notificationMode?: 'console' | 'desktop' | 'multiple';
   hasTime?: boolean;
+  notificationMode?: 'console' | 'desktop' | 'multiple';
 };
 
 export { Parameters };

@@ -6,7 +6,6 @@ import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
 
 import alias from '@rollup/plugin-alias';
-import sucrase from '@rollup/plugin-sucrase';
 import typescript from '@rollup/plugin-typescript';
 
 import copy from 'rollup-plugin-copy';
@@ -59,7 +58,6 @@ export default defineConfig([
           },
         ],
       }),
-      sucrase({ transforms: ['typescript'] }),
       dts(),
     ],
     input: `${sourceFolder}/${indexFile}`,

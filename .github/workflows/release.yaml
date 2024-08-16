@@ -3,7 +3,7 @@ name: Release
 on:
   workflow_run:
     workflows:
-      - ESLint
+      - Spec
     types:
       - completed
   push:
@@ -47,6 +47,9 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Clean
+        run: rm -rf dist/{features,shared}
 
       - name: Create Release
         env:
