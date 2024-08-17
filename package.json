@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "@archoleat/commitlint-define-config": "^1.0.9",
-    "@archoleat/eslint-flat-compatibility": "^1.1.6",
+    "@archoleat/eslint-flat-compatibility": "^1.1.7",
     "@archoleat/prettier-define-config": "^1.0.1",
     "@archoleat/semantic-release-define-config": "^1.1.14",
     "@commitlint/cli": "^19.4.0",
@@ -75,7 +75,7 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^22.3.0",
+    "@types/node": "^22.4.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vitest/coverage-v8": "^2.0.5",
@@ -102,7 +102,7 @@
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
-    "semantic-release": "^24.0.0",
+    "semantic-release": "^24.1.0",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   }
