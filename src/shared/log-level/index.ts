@@ -9,10 +9,13 @@ import type { Parameters } from './parameters.d.ts';
  * This asynchronous function logs messages with different colors based
  * on the specified title.
  *
- * @param {Parameters} parameters - The `parameters` object should include
- * the following properties:
+ * @param {string} message -
  *
- * @returns The `logLevel` asynchronous function returns different console
+ * @param {string} title -
+ *
+ * @param {boolean} hasTime -
+ *
+ * @returns The `logLevel` function returns different console
  * outputs based on the `title` parameter provided in the `parameters` object.
  */
 const logLevel = async (parameters: Parameters) => {

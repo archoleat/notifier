@@ -8,8 +8,15 @@ import type { Parameters } from './parameters.d.ts';
  * notifications either through console logging or desktop notifications
  * based on the specified `notificationMode`.
  *
- * @param {Parameters} parameters - The `parameters` object contains
- * the following properties:
+ * @param {string} icon -
+ *
+ * @param {string} message -
+ *
+ * @param {string} title -
+ *
+ * @param {boolean} hasTime -
+ *
+ * @param {'console' | 'desktop' | 'multiple'} notificationMode -
  *
  * @returns If the `notificationMode` is set to 'console', the `logLevel`
  * function will be called with the provided `message`, `title`, and `hasTime`

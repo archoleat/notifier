@@ -6,8 +6,11 @@ import type { Parameters } from '#types';
  * The function `success` is an asynchronous function that takes in parameters
  * and returns a notification with a success message.
  *
- * @param {Parameters} parameters - The parameters for the `success` function are an object with the
- * following properties:
+ * @param {string} message -
+ *
+ * @param {boolean} hasTime -
+ *
+ * @param {'console' | 'desktop' | 'multiple'} notificationMode -
  *
  * @returns The `success` function is returning the result of calling the
  * `elector` asynchronous function with the provided parameters,

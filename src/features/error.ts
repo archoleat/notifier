@@ -6,8 +6,11 @@ import type { Parameters } from '#types';
  * The asynchronous function `error` takes in parameters to display an
  * error message with optional time and notification mode settings.
  *
- * @param {Parameters} parameters - The `parameters` object in the `error` function contains the
- * following properties:
+ * @param {string} message -
+ *
+ * @param {boolean} hasTime -
+ *
+ * @param {'console' | 'desktop' | 'multiple'} notificationMode -
  *
  * @returns The `error` function is returning the result of calling the
  * `elector` asynchronous function with the provided parameters,
