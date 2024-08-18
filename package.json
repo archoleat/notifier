@@ -50,12 +50,7 @@
   "scripts": {
     "init": "pnpm i && husky",
     "spec": "vitest",
-    "spec:coverage": "vitest run --coverage",
     "build": "rollup -c rollup.config.ts --configPlugin typescript",
-    "release": "semantic-release",
-    "lint:editorconfig": "editorconfig-checker",
-    "lint:formatting": "prettier . --check",
-    "lint:md": "remark . --quiet --frail",
     "lint:ts": "eslint src/**/*.ts --fix",
     "prettify": "prettier . --write"
   },
