@@ -49,10 +49,7 @@
   ],
   "scripts": {
     "init": "pnpm i && husky",
-    "spec": "vitest",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript",
-    "lint:ts": "eslint src/**/*.ts --fix",
-    "prettify": "prettier . --write"
+    "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
   "dependencies": {
     "chalk": "^5.3.0",
