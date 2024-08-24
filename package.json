@@ -35,7 +35,7 @@
   "imports": {
     "#features": "./src/features/index.ts",
     "#shared": "./src/shared/index.ts",
-    "#types": "./src/shared/types/index.d.ts"
+    "#types": "./src/shared/types/index.ts"
   },
   "exports": {
     ".": "./dist/index.js"
