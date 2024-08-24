@@ -16,7 +16,7 @@
     "paths": {
       "#features": ["./src/features/index.ts"],
       "#shared": ["./src/shared/index.ts"],
-      "#types": ["./src/shared/types/index.d.ts"]
+      "#types": ["./src/shared/types/index.ts"]
     },
     "rootDir": "src",
     "types": ["chalk", "node", "vitest"],

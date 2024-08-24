@@ -1,3 +1,3 @@
 type Message = [string, { length: number }];
 
-export { Message };
+export type { Message };
