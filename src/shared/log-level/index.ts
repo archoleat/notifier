@@ -43,10 +43,10 @@ const logLevel = async (parameters: Parameters) => {
   }
 
   if (title === 'INFO') {
-    return console.log(chalk.blue(notification));
+    return console.info(chalk.blue(notification));
   }
 
-  return console.info(chalk.gray(notification));
+  return console.log(chalk.gray(notification));
 };
 
 export { logLevel };
