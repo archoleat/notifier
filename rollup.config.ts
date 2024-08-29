@@ -12,29 +12,31 @@ import copy from 'rollup-plugin-copy';
 
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
-const featuresFolder = `${sourceFolder}/features`;
-const iconsFolder = `${sourceFolder}/icons`;
 const sharedFolder = `${sourceFolder}/shared`;
+const helpersFolder = `${sharedFolder}/helpers`;
+const iconsFolder = `${sourceFolder}/icons`;
 const typesFolder = `${sharedFolder}/types`;
 
 const fileFormat = 'es';
-const fileName = 'index';
+const entryFileName = 'root';
+const subEntryFileName = 'index';
+const outputFileName = 'index';
 
-const declarationFile = `${fileName}.d.ts`;
-const indexFile = `${fileName}.ts`;
-const outputFile = `${fileName}.js`;
+const declarationFile = `${outputFileName}.d.ts`;
+const entryFile = `${entryFileName}.ts`;
+const outputFile = `${outputFileName}.js`;
 
 export default defineConfig([
   {
     external: ['chalk', 'node-notifier'],
     plugins: [
       copy({
-        targets: [{ src: `${iconsFolder}/*`, dest: `${destinationFolder}/icons` }],
+        targets: [{ src: iconsFolder, dest: destinationFolder }],
       }),
       typescript(),
       minify(),
     ],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
       file: `${destinationFolder}/${outputFile}`,
       format: fileFormat,
@@ -45,22 +47,22 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#features',
-            replacement: resolve(`${featuresFolder}/${indexFile}`),
+            find: '#shared',
+            replacement: resolve(`${sharedFolder}/${subEntryFileName}`),
           },
           {
-            find: '#shared',
-            replacement: resolve(`${sharedFolder}/${indexFile}`),
+            find: '#helpers',
+            replacement: resolve(`${helpersFolder}/${subEntryFileName}`),
           },
           {
             find: '#types',
-            replacement: resolve(`${typesFolder}/${indexFile}`),
+            replacement: resolve(`${typesFolder}/${subEntryFileName}`),
           },
         ],
       }),
       dts(),
     ],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
       file: `${destinationFolder}/${declarationFile}`,
       format: fileFormat,

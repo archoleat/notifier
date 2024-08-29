@@ -49,7 +49,7 @@ jobs:
         run: pnpm build
 
       - name: Sanitize
-        run: rm -rf dist/{features,shared}
+        run: rm -rf dist/{features,shared} root.d.ts
 
       - name: Pretty
         run: prettier dist/index.d.ts --write
