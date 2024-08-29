@@ -25,13 +25,7 @@ import type { Parameters } from './parameters.ts';
  * parameters. If the `notificationMode` is
  */
 const messageGenerator = async (parameters: Parameters) => {
-  const {
-    icon,
-    message,
-    title,
-    hasTime = true,
-    notificationMode = 'console',
-  } = parameters;
+  const { icon, title, message, hasTime, notificationMode } = parameters;
 
   if (notificationMode === 'console') {
     return logLevel({ message, title, hasTime });

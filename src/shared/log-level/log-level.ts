@@ -1,9 +1,8 @@
 import chalk from 'chalk';
 
-import { currentTime } from '../current-time.ts';
-import { truncate } from '../truncate/truncate.ts';
+import { notificationGenerator } from '#helpers';
 
-import type { Parameters } from './parameters.d.ts';
+import type { Parameters } from './parameters.ts';
 
 /**
  * This asynchronous function logs messages with different colors based
@@ -21,14 +20,7 @@ import type { Parameters } from './parameters.d.ts';
 const logLevel = async (parameters: Parameters) => {
   const { message, title, hasTime } = parameters;
 
-  const generateNotification = async () => {
-    const time = hasTime ? `${chalk.white(await currentTime())} ` : '';
-    const body = await truncate({ message });
-
-    return `${time}[${title}] ${body}`;
-  };
-
-  const notification = await generateNotification();
+  const notification = await notificationGenerator({ message, title, hasTime });
 
   if (title === 'ERROR') {
     return console.error(chalk.red(notification));

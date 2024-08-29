@@ -1,9 +1,9 @@
 import type { Message } from '#types';
 
 type Parameters = {
-  message: Message;
   icon: string;
   title: string;
+  message: Message;
   hasTime?: boolean;
   notificationMode?: 'console' | 'desktop' | 'multiple';
 };

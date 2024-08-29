@@ -19,12 +19,14 @@ import type { Parameters } from '#types';
 const info = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
+  const label = 'info';
+
   return messageGenerator({
     message,
     hasTime,
     notificationMode,
-    icon: 'info',
-    title: 'INFO',
+    icon: label,
+    title: label,
   });
 };
 

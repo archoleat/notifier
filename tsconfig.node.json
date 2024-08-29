@@ -15,6 +15,7 @@
     "moduleResolution": "NodeNext",
     "paths": {
       "#features": ["./src/features/index.ts"],
+      "#helpers": ["./src/shared/helpers/index.ts"],
       "#shared": ["./src/shared/index.ts"],
       "#types": ["./src/shared/types/index.ts"]
     },

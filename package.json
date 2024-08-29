@@ -34,6 +34,7 @@
   "types": "dist/index.d.ts",
   "imports": {
     "#features": "./src/features/index.ts",
+    "#helpers": "./src/shared/helpers/index.ts",
     "#shared": "./src/shared/index.ts",
     "#src": "./src/index.ts",
     "#types": "./src/shared/types/index.ts"

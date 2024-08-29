@@ -15,10 +15,12 @@ import type { Parameters } from '#types';
 const debug = async (parameters: Parameters) => {
   const { message } = parameters;
 
+  const label = 'debug';
+
   return messageGenerator({
     message,
-    icon: 'debug',
-    title: 'DEBUG',
+    icon: label,
+    title: label,
   });
 };
 
