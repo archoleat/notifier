@@ -48,8 +48,11 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Clean
+      - name: Sanitize
         run: rm -rf dist/{features,shared}
+
+      - name: Pretty
+        run: prettier dist/index.d.ts --write
 
       - name: Create Release
         env:

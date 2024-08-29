@@ -1,10 +1,10 @@
-import { logLevel } from '../log-level/index.ts';
-import { notifier } from '../notifier/index.ts';
+import { logLevel } from '../log-level/log-level.ts';
+import { notifier } from '../notifier/notifier.ts';
 
-import type { Parameters } from './parameters.d.ts';
+import type { Parameters } from './parameters.ts';
 
 /**
- * The function `elector` is an asynchronous function that handles
+ * The function `messageGenerator` is an asynchronous function that handles
  * notifications either through console logging or desktop notifications
  * based on the specified `notificationMode`.
  *
@@ -24,7 +24,7 @@ import type { Parameters } from './parameters.d.ts';
  * function will be called with the provided `message`, `icon`, and `title`
  * parameters. If the `notificationMode` is
  */
-const elector = async (parameters: Parameters) => {
+const messageGenerator = async (parameters: Parameters) => {
   const {
     icon,
     message,
@@ -47,4 +47,4 @@ const elector = async (parameters: Parameters) => {
   ];
 };
 
-export { elector };
+export { messageGenerator };

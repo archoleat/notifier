@@ -1,4 +1,4 @@
-import { elector } from '#shared';
+import { messageGenerator } from '#shared';
 
 import type { Parameters } from '#types';
 
@@ -13,13 +13,13 @@ import type { Parameters } from '#types';
  * @param {'console' | 'desktop' | 'multiple'} notificationMode -
  *
  * @returns The `info` function is returning the result of calling the
- * `elector` asynchronous function with the provided parameters
+ * `messageGenerator` asynchronous function with the provided parameters
  * and additional properties `icon` and `title`.
  */
 const info = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
-  return elector({
+  return messageGenerator({
     message,
     hasTime,
     notificationMode,

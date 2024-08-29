@@ -1,4 +1,4 @@
-import { elector } from '#shared';
+import { messageGenerator } from '#shared';
 
 import type { Parameters } from '#types';
 
@@ -13,14 +13,14 @@ import type { Parameters } from '#types';
  * @param {'console' | 'desktop' | 'multiple'} notificationMode -
  *
  * @returns The `success` function is returning the result of calling the
- * `elector` asynchronous function with the provided parameters,
+ * `messageGenerator` asynchronous function with the provided parameters,
  * including `message`, `hasTime`, `notificationMode`, `icon`, and `title`.
  * The `icon` is set to 'success' and the `title` is set to 'SUCCESS'.
  */
 const success = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
-  return elector({
+  return messageGenerator({
     message,
     hasTime,
     notificationMode,

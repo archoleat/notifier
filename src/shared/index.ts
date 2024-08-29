@@ -1,1 +1,1 @@
-export { elector } from './elector/index.ts';
+export { messageGenerator } from './message-generator/message-generator.ts';

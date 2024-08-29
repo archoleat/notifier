@@ -1,4 +1,4 @@
-import { elector } from '#shared';
+import { messageGenerator } from '#shared';
 
 import type { Parameters } from '#types';
 
@@ -9,13 +9,13 @@ import type { Parameters } from '#types';
  * @param {string} message -
  *
  * @returns The `debug` function is returning the result of calling the
- * `elector` function with the provided `message`, `icon`, and `title` parameters.
+ * `messageGenerator` function with the provided `message`, `icon`, and `title` parameters.
  * The `icon` is set to 'debug' and the `title` is set to 'DEBUG'.
  */
 const debug = async (parameters: Parameters) => {
   const { message } = parameters;
 
-  return elector({
+  return messageGenerator({
     message,
     icon: 'debug',
     title: 'DEBUG',

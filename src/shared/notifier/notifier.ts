@@ -1,8 +1,8 @@
 import Notifier from 'node-notifier';
 
-import { truncate } from '../truncate/index.ts';
+import { truncate } from '../truncate/truncate.ts';
 
-import type { Parameters } from './parameters.d.ts';
+import type { Parameters } from './parameters.ts';
 
 /**
  * The asynchronous function `notifier` takes in parameters for
