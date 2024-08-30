@@ -14,9 +14,9 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "paths": {
-      "#helpers": ["./src/shared/helpers/index.ts"],
-      "#shared": ["./src/shared/index.ts"],
-      "#types": ["./src/shared/types/index.ts"]
+      "#helpers/*": ["./src/shared/helpers/*"],
+      "#shared/*": ["./src/shared/*"],
+      "#types/*": ["./src/shared/types/*"]
     },
     "rootDir": "src",
     "types": ["chalk", "node", "vitest"],

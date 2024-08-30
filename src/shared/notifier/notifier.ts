@@ -1,6 +1,6 @@
 import Notifier from 'node-notifier';
 
-import { truncate } from '#helpers';
+import { truncate } from '#helpers/truncate/truncate.ts';
 
 import type { Parameters } from './parameters.ts';
 

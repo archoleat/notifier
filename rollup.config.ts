@@ -18,8 +18,7 @@ const iconsFolder = `${sourceFolder}/icons`;
 const typesFolder = `${sharedFolder}/types`;
 
 const fileFormat = 'es';
-const entryFileName = 'root';
-const subEntryFileName = 'index';
+const entryFileName = 'app';
 const outputFileName = 'index';
 
 const declarationFile = `${outputFileName}.d.ts`;
@@ -48,15 +47,15 @@ export default defineConfig([
         entries: [
           {
             find: '#shared',
-            replacement: resolve(`${sharedFolder}/${subEntryFileName}`),
+            replacement: resolve(sharedFolder),
           },
           {
             find: '#helpers',
-            replacement: resolve(`${helpersFolder}/${subEntryFileName}`),
+            replacement: resolve(helpersFolder),
           },
           {
             find: '#types',
-            replacement: resolve(`${typesFolder}/${subEntryFileName}`),
+            replacement: resolve(typesFolder),
           },
         ],
       }),

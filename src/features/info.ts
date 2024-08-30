@@ -1,6 +1,6 @@
-import { messageGenerator } from '#shared';
+import { messageGenerator } from '#shared/message-generator/message-generator.ts';
 
-import type { Parameters } from '#types';
+import type { Parameters } from '#types/parameters.ts';
 
 /**
  * The `info` asynchronous function displays an information

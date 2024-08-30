@@ -33,10 +33,9 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
-    "#helpers": "./src/shared/helpers/index.ts",
-    "#shared": "./src/shared/index.ts",
-    "#src": "./src/index.ts",
-    "#types": "./src/shared/types/index.ts"
+    "#helpers/*": "./src/shared/helpers/*",
+    "#shared/*": "./src/shared/*",
+    "#types/*": "./src/shared/types/*"
   },
   "exports": {
     ".": "./dist/index.js"

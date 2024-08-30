@@ -1,6 +1,6 @@
-import { messageGenerator } from '#shared';
+import { messageGenerator } from '#shared/message-generator/message-generator.ts';
 
-import type { Parameters } from '#types';
+import type { Parameters } from '#types/parameters.ts';
 
 /**
  * The `debug` asynchronous function takes a message as a parameter and displays
