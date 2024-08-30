@@ -52,7 +52,7 @@ jobs:
         run: rm -rf dist/{features,shared} app.d.ts
 
       - name: Pretty
-        run: prettier dist/index.d.ts --write
+        run: pnpm prettier dist/index.d.ts --write
 
       - name: Create Release
         env:
