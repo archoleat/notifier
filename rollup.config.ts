@@ -13,6 +13,7 @@ import copy from 'rollup-plugin-copy';
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
 const sharedFolder = `${sourceFolder}/shared`;
+const generatorsFolder = `${sharedFolder}/generators`;
 const helpersFolder = `${sharedFolder}/helpers`;
 const iconsFolder = `${sourceFolder}/icons`;
 const typesFolder = `${sharedFolder}/types`;
@@ -45,6 +46,10 @@ export default defineConfig([
     plugins: [
       alias({
         entries: [
+          {
+            find: '#generators',
+            replacement: resolve(generatorsFolder),
+          },
           {
             find: '#shared',
             replacement: resolve(sharedFolder),

@@ -1,10 +1,10 @@
-import { logLevel } from '../log-level/log-level.ts';
-import { notifier } from '../notifier/notifier.ts';
+import { logLevel } from '#shared/log-level/log-level.ts';
+import { notifier } from '#shared/notifier/notifier.ts';
 
 import type { Parameters } from './parameters.ts';
 
 /**
- * The function `messageGenerator` is an asynchronous function that handles
+ * The function `splitter` is an asynchronous function that handles
  * notifications either through console logging or desktop notifications
  * based on the specified `notificationMode`.
  *
@@ -24,7 +24,7 @@ import type { Parameters } from './parameters.ts';
  * function will be called with the provided `message`, `icon`, and `title`
  * parameters. If the `notificationMode` is
  */
-const messageGenerator = async (parameters: Parameters) => {
+const splitter = async (parameters: Parameters) => {
   const { icon, title, message, hasTime, notificationMode } = parameters;
 
   if (notificationMode === 'console') {
@@ -41,4 +41,4 @@ const messageGenerator = async (parameters: Parameters) => {
   ];
 };
 
-export { messageGenerator };
+export { splitter };

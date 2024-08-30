@@ -1,4 +1,4 @@
-import { messageGenerator } from '#shared/message-generator/message-generator.ts';
+import { splitter } from '#helpers/splitter/splitter.ts';
 
 import type { Parameters } from '#types/parameters.ts';
 
@@ -9,18 +9,18 @@ import type { Parameters } from '#types/parameters.ts';
  * @param {string} message -
  *
  * @returns The `debug` function is returning the result of calling the
- * `messageGenerator` function with the provided `message`, `icon`, and `title` parameters.
+ * `splitter` function with the provided `message`, `icon`, and `title` parameters.
  * The `icon` is set to 'debug' and the `title` is set to 'DEBUG'.
  */
 const debug = async (parameters: Parameters) => {
   const { message } = parameters;
 
-  const label = 'debug';
+  const LABEL = 'debug';
 
-  return messageGenerator({
+  return splitter({
     message,
-    icon: label,
-    title: label,
+    icon: LABEL,
+    title: LABEL,
   });
 };
 

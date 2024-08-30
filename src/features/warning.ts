@@ -1,4 +1,4 @@
-import { messageGenerator } from '#shared/message-generator/message-generator.ts';
+import { splitter } from '#helpers/splitter/splitter.ts';
 
 import type { Parameters } from '#types/parameters.ts';
 
@@ -13,21 +13,21 @@ import type { Parameters } from '#types/parameters.ts';
  * @param {'console' | 'desktop' | 'multiple'} notificationMode -
  *
  * @returns The `warning` function is returning the result of calling the
- * `messageGenerator` asynchronous function with the provided parameters,
+ * `splitter` asynchronous function with the provided parameters,
  * including `message`, `hasTime`, `notificationMode`, `icon`, and `title`.
  * The `icon` is set to 'warning' and the `title` is set to 'WARNING'.
  */
 const warning = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
-  const label = 'warning';
+  const LABEL = 'warning';
 
-  return messageGenerator({
+  return splitter({
     message,
     hasTime,
     notificationMode,
-    icon: label,
-    title: label,
+    icon: LABEL,
+    title: LABEL,
   });
 };
 
