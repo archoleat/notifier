@@ -33,6 +33,7 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
+    "#constants/*": "./src/shared/constants/*",
     "#generators/*": "./src/shared/generators/*",
     "#helpers/*": "./src/shared/helpers/*",
     "#shared/*": "./src/shared/*",

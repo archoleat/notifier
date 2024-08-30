@@ -1,3 +1,5 @@
+import { LOG_LEVELS } from '#constants/log-levels.ts';
+
 import { splitter } from '#helpers/splitter/splitter.ts';
 
 import type { Parameters } from '#types/parameters.ts';
@@ -20,7 +22,7 @@ import type { Parameters } from '#types/parameters.ts';
 const error = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
-  const LABEL = 'error';
+  const LABEL = LOG_LEVELS.ERROR;
 
   return splitter({
     message,

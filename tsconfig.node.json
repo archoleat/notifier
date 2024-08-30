@@ -14,6 +14,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "paths": {
+      "#constants/*": ["./src/shared/constants/*"],
       "#generators/*": ["./src/shared/generators/*"],
       "#helpers/*": ["./src/shared/helpers/*"],
       "#shared/*": ["./src/shared/*"],

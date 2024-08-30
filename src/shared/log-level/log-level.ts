@@ -1,5 +1,7 @@
 import chalk from 'chalk';
 
+import { LOG_LEVELS } from '#constants/log-levels.ts';
+
 import { notificationGenerator } from '#generators/notification/notification.ts';
 
 import type { Parameters } from './parameters.ts';
@@ -22,19 +24,19 @@ const logLevel = async (parameters: Parameters) => {
 
   const notification = await notificationGenerator({ message, title, hasTime });
 
-  if (title === 'error') {
+  if (title === LOG_LEVELS.ERROR) {
     return console.error(chalk.red(notification));
   }
 
-  if (title === 'warning') {
+  if (title === LOG_LEVELS.WARNING) {
     return console.warn(chalk.yellow(notification));
   }
 
-  if (title === 'success') {
+  if (title === LOG_LEVELS.SUCCESS) {
     return console.log(chalk.green(notification));
   }
 
-  if (title === 'info') {
+  if (title === LOG_LEVELS.INFO) {
     return console.info(chalk.blue(notification));
   }
 

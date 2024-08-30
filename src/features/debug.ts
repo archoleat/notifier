@@ -1,3 +1,5 @@
+import { LOG_LEVELS } from '#constants/log-levels.ts';
+
 import { splitter } from '#helpers/splitter/splitter.ts';
 
 import type { Parameters } from '#types/parameters.ts';
@@ -15,7 +17,7 @@ import type { Parameters } from '#types/parameters.ts';
 const debug = async (parameters: Parameters) => {
   const { message } = parameters;
 
-  const LABEL = 'debug';
+  const LABEL = LOG_LEVELS.DEBUG;
 
   return splitter({
     message,
