@@ -22,19 +22,19 @@ const logLevel = async (parameters: Parameters) => {
 
   const notification = await notificationGenerator({ message, title, hasTime });
 
-  if (title === 'ERROR') {
+  if (title === 'error') {
     return console.error(chalk.red(notification));
   }
 
-  if (title === 'WARNING') {
+  if (title === 'warning') {
     return console.warn(chalk.yellow(notification));
   }
 
-  if (title === 'SUCCESS') {
+  if (title === 'success') {
     return console.log(chalk.green(notification));
   }
 
-  if (title === 'INFO') {
+  if (title === 'info') {
     return console.info(chalk.blue(notification));
   }
 
