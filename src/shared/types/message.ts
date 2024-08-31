@@ -1,3 +1,3 @@
-type Message = [string, { length: number }];
+type Message = string | [string, { length: number }];
 
 export type { Message };

@@ -35,7 +35,7 @@ import { error, info, success, warning, debug } from '@archoleat/notifier';
 // In the debug function you can only specify the message and its length.
 // Only work in console mode.
 await debug({
-  message: ['your message'],
+  message: ['your message'] | 'your message',
 });
 
 await info({
@@ -45,7 +45,7 @@ await info({
     // Truncates the message after a specified number of characters.
     /** @default Infinity */
     { length: Infinity },
-  ],
+  ] | 'your message',
 
   // Enable/disable time, not work in desktop mode.
   /** @default true */

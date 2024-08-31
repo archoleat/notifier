@@ -19,9 +19,16 @@ import type { Parameters } from './parameters.ts';
  * Otherwise, the original `string` is being returned.
  */
 const truncate = async (parameters: Parameters) => {
-  const {
-    message: [string, { length = Infinity } = {}],
-  } = parameters;
+  const { message } = parameters;
+
+  let string;
+  let length = Infinity;
+
+  if (Array.isArray(message)) {
+    [string, { length = Infinity } = {}] = message;
+  } else {
+    string = message;
+  }
 
   if (string.length > length) {
     return `${string.slice(0, Math.max(0, length))}...`;
