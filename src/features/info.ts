@@ -11,7 +11,8 @@ import type { Parameters } from '#types/parameters.ts';
  *
  * @param {boolean} [hasTime=true] - Indicates if the info has a timestamp.
  *
- * @param {string} [notificationMode='console'] - The notification mode for the info.
+ * @param {string} [notificationMode='console'] - The notification mode
+ * for the info.
  *
  * @return {Promise} - A promise that resolves after handling the info.
  */

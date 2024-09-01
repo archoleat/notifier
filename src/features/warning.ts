@@ -11,7 +11,8 @@ import type { Parameters } from '#types/parameters.ts';
  *
  * @param {boolean} [hasTime=true] - Indicates if the warning has a timestamp.
  *
- * @param {string} [notificationMode='console'] - The notification mode for the warning.
+ * @param {string} [notificationMode='console'] - The notification mode
+ * for the warning.
  *
  * @return {Promise} - A promise that resolves after handling the warning.
  */
