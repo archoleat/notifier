@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2](https://github.com/archoleat/notifier/compare/v1.0.1...v1.0.2) (2024-09-01)
+
+### Code Refactoring
+
+* methods ([#17](https://github.com/archoleat/notifier/issues/17)) ([e671274](https://github.com/archoleat/notifier/commit/e67127417541ef26f5fa00bcddcad439f9c52e01))
+
 ## [1.0.1](https://github.com/archoleat/notifier/compare/v1.0.0...v1.0.1) (2024-08-16)
 
 ### Code Refactoring
