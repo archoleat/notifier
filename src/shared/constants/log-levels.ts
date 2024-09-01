@@ -3,7 +3,6 @@ const LOG_LEVELS = {
   WARNING: 'warning',
   SUCCESS: 'success',
   INFO: 'info',
-  DEBUG: 'debug',
 };
 
 export { LOG_LEVELS };

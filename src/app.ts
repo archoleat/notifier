@@ -1,4 +1,3 @@
-export { debug } from './features/debug.ts';
 export { error } from './features/error.ts';
 export { info } from './features/info.ts';
 export { success } from './features/success.ts';

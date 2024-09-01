@@ -30,29 +30,20 @@ bun i -D @archoleat/notifier
 ## Usage
 
 ```js
-import { error, info, success, warning, debug } from '@archoleat/notifier';
-
-// In the debug function you can only specify the message and its length.
-// Only work in console mode.
-await debug({
-  message: ['your message'] | 'your message',
-});
+import { error, info, success, warning } from '@archoleat/notifier';
 
 await info({
-  message: [
-    'your message',
-
-    // Truncates the message after a specified number of characters.
-    /** @default Infinity */
-    { length: Infinity },
-  ] | 'your message',
-
-  // Enable/disable time, not work in desktop mode.
-  /** @default true */
-  hasTime: true,
-
-  /** @default 'console' */
-  notificationMode: 'console' | 'desktop' | 'multiple',
+  message:
+    [
+      '',
+      {
+        length: Infinity // Truncates the message after a specified number of characters.
+      },
+    ]
+    | ['']
+    | '',
+  hasTime: true, // Enable/disable time, not work in desktop mode.
+  notificationMode: 'console', // Available modes: console, desktop, multiple.
 });
 ```
 
