@@ -5,20 +5,15 @@ import { truncate } from '#helpers/truncate/truncate.ts';
 import type { Parameters } from './parameters.ts';
 
 /**
- * The asynchronous function `notifier` takes in parameters for
- * an icon, message, and title, then uses a Notifier to
- * display a notification with the specified details.
+ * Notifies.
  *
- * @param {string} icon -
+ * @param {string} icon - The icon for the notification.
  *
- * @param {string} message -
+ * @param {string} message - The message content of the notification.
  *
- * @param {string} title -
+ * @param {string} title - The title of the notification.
  *
- * @returns The `notifier` function is returning a promise that
- * resolves to the result of calling the `Notifier.notify` function with the
- * provided `title`, `icon`, and truncated `message`.
- * The `icon` parameter is used to construct the path to the icon image file.
+ * @return {Promise} - A promise that resolves to the notification result.
  */
 const notifier = async (parameters: Parameters) => {
   const { icon, message, title } = parameters;

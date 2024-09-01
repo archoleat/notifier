@@ -1,22 +1,14 @@
 import type { Parameters } from './parameters.ts';
 
 /**
- * The `truncate` asynchronous function takes a string and
- * an optional length parameter, and truncates the string if
- * it exceeds the specified length, appending "..." if necessary.
+ * Truncates a string or array message based on the specified length.
  *
- * @param {Object} parameters - The `parameters` for the `truncate` function.
+ * @param {string | Array} message - The message to be truncated.
  *
- * @param {string} parameters.string - The `string` parameter accepts a string
- * with the message.
+ * @param {number} [length=Infinity] - The message to be truncated.
  *
- * @param {number} parameters.length - The `length` parameter sets the
- * length of your message.
- *
- * @returns {Promise} - If the length of the `string` in the `message`
- * parameter is greater than the specified `length`, a truncated version
- * of the `string` with `...` appended at the end is being returned.
- * Otherwise, the original `string` is being returned.
+ * @return {string} - The truncated message if it's length exceeds
+ * the specified length, otherwise the original message.
  */
 const truncate = async (parameters: Parameters) => {
   const { message } = parameters;

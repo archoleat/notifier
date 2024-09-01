@@ -5,19 +5,15 @@ import { splitter } from '#helpers/splitter/splitter.ts';
 import type { Parameters } from '#types/parameters.ts';
 
 /**
- * The function `warning` is an asynchronous function that displays
- * a warning message with optional parameters for time and notification mode.
+ * Handles an warning.
  *
- * @param {string} message -
+ * @param {string} message - The warning message.
  *
- * @param {boolean} hasTime -
+ * @param {boolean} [hasTime=true] - Indicates if the warning has a timestamp.
  *
- * @param {'console' | 'desktop' | 'multiple'} notificationMode -
+ * @param {string} [notificationMode='console'] - The notification mode for the warning.
  *
- * @returns The `warning` function is returning the result of calling the
- * `splitter` asynchronous function with the provided parameters,
- * including `message`, `hasTime`, `notificationMode`, `icon`, and `title`.
- * The `icon` is set to 'warning' and the `title` is set to 'WARNING'.
+ * @return {Promise} - A promise that resolves after handling the warning.
  */
 const warning = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;

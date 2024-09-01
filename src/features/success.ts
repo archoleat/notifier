@@ -5,19 +5,15 @@ import { splitter } from '#helpers/splitter/splitter.ts';
 import type { Parameters } from '#types/parameters.ts';
 
 /**
- * The function `success` is an asynchronous function that takes in parameters
- * and returns a notification with a success message.
+ * Handles an success.
  *
- * @param {string} message -
+ * @param {string} message - The success message.
  *
- * @param {boolean} hasTime -
+ * @param {boolean} [hasTime=true] - Indicates if the success has a timestamp.
  *
- * @param {'console' | 'desktop' | 'multiple'} notificationMode -
+ * @param {string} [notificationMode='console'] - The notification mode for the success.
  *
- * @returns The `success` function is returning the result of calling the
- * `splitter` asynchronous function with the provided parameters,
- * including `message`, `hasTime`, `notificationMode`, `icon`, and `title`.
- * The `icon` is set to 'success' and the `title` is set to 'SUCCESS'.
+ * @return {Promise} - A promise that resolves after handling the success.
  */
 const success = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;

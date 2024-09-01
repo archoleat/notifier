@@ -7,17 +7,17 @@ import { notificationGenerator } from '#generators/notification/notification.ts'
 import type { Parameters } from './parameters.ts';
 
 /**
- * This asynchronous function logs messages with different colors based
- * on the specified title.
+ * Logs a message with a specified log level.
  *
- * @param {string} message -
+ * @param {string} message - The message to be logged.
  *
- * @param {string} title -
+ * @param {string} title - The log level of the message.
  *
- * @param {boolean} hasTime -
+ * @param {boolean} hasTime - Indicates if the log should
+ * include a timestamp.
  *
- * @returns The `logLevel` function returns different console
- * outputs based on the `title` parameter provided in the `parameters` object.
+ * @return {void} - Logs the message with the specified log level
+ * using console methods.
  */
 const logLevel = async (parameters: Parameters) => {
   const { message, title, hasTime } = parameters;
