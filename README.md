@@ -19,26 +19,12 @@
 - [Contributing](#contributing)
 - [License](#license)
 
+A small, simple and customizable notifier for your projects.
+
 ## Installation
 
 ```shell
-# bun
 bun i -D @archoleat/notifier
-```
-
-```shell
-# pnpm
-pnpm i -D @archoleat/notifier
-```
-
-```shell
-# npm
-npm i -D @archoleat/notifier
-```
-
-```shell
-# yarn
-yarn add -D @archoleat/notifier
 ```
 
 ## Usage
@@ -47,10 +33,17 @@ yarn add -D @archoleat/notifier
 import { error, info, success, warning } from '@archoleat/notifier';
 
 await info({
-  message: 'your message',
-  hasTime: true, // Enable/disable time, not work in desktop mode. default true
-  messageLength: 80, // Sets the length of the message. default 80
-  notificationMode: 'console' | 'desktop' | 'multiple', // default console
+  message:
+    [
+      '',
+      {
+        length: Infinity // Truncates the message after a specified number of characters.
+      },
+    ]
+    | ['']
+    | '',
+  hasTime: true, // Enable/disable time, not work in desktop mode.
+  notificationMode: 'console', // Available modes: console, desktop, multiple.
 });
 ```
 

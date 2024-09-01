@@ -1,22 +1,32 @@
-import { elector } from '#shared';
+import { LOG_LEVELS } from '#constants/log-levels.ts';
 
-import type { Parameters } from '#types';
+import { splitter } from '#helpers/splitter/splitter.ts';
 
+import type { Parameters } from '#types/parameters.ts';
+
+/**
+ * Handles an warning.
+ *
+ * @param {string} message - The warning message.
+ *
+ * @param {boolean} [hasTime=true] - Indicates if the warning has a timestamp.
+ *
+ * @param {string} [notificationMode='console'] - The notification mode
+ * for the warning.
+ *
+ * @return {Promise} - A promise that resolves after handling the warning.
+ */
 const warning = async (parameters: Parameters) => {
-  const {
-    message,
-    hasTime = true,
-    messageLength = 80,
-    notificationMode = 'console',
-  } = parameters;
+  const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
-  return elector({
+  const LABEL = LOG_LEVELS.WARNING;
+
+  return splitter({
     message,
     hasTime,
-    messageLength,
     notificationMode,
-    icon: './icons/warning.png',
-    title: 'WARNING',
+    icon: LABEL,
+    title: LABEL,
   });
 };
 

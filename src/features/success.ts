@@ -1,22 +1,32 @@
-import { elector } from '#shared';
+import { LOG_LEVELS } from '#constants/log-levels.ts';
 
-import type { Parameters } from '#types';
+import { splitter } from '#helpers/splitter/splitter.ts';
 
+import type { Parameters } from '#types/parameters.ts';
+
+/**
+ * Handles an success.
+ *
+ * @param {string} message - The success message.
+ *
+ * @param {boolean} [hasTime=true] - Indicates if the success has a timestamp.
+ *
+ * @param {string} [notificationMode='console'] - The notification mode
+ * for the success.
+ *
+ * @return {Promise} - A promise that resolves after handling the success.
+ */
 const success = async (parameters: Parameters) => {
-  const {
-    message,
-    hasTime = true,
-    messageLength = 80,
-    notificationMode = 'console',
-  } = parameters;
+  const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
-  return elector({
+  const LABEL = LOG_LEVELS.SUCCESS;
+
+  return splitter({
     message,
     hasTime,
-    messageLength,
     notificationMode,
-    icon: './icons/success.png',
-    title: 'SUCCESS',
+    icon: LABEL,
+    title: LABEL,
   });
 };
 

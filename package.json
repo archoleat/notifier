@@ -11,7 +11,7 @@
   "homepage": "https://github.com/archoleat/notifier#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/archoleat/notifier.git"
+    "url": "https://github.com/archoleat/notifier.git"
   },
   "bugs": {
     "url": "https://github.com/archoleat/notifier/issues"
@@ -25,21 +25,19 @@
     "notify",
     "plugin"
   ],
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
   },
-  "volta": {
-    "node": "20.16.0",
-    "pnpm": "9.4.0"
-  },
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
-    "#features": "./src/features/index.ts",
-    "#shared": "./src/shared/index.ts",
-    "#types": "./src/shared/types/index.d.ts"
+    "#constants/*": "./src/shared/constants/*",
+    "#generators/*": "./src/shared/generators/*",
+    "#helpers/*": "./src/shared/helpers/*",
+    "#shared/*": "./src/shared/*",
+    "#types/*": "./src/shared/types/*"
   },
   "exports": {
     ".": "./dist/index.js"
@@ -49,61 +47,53 @@
   ],
   "scripts": {
     "init": "pnpm i && husky",
-    "spec": "vitest",
-    "spec:coverage": "vitest run --coverage",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript",
-    "release": "semantic-release",
-    "lint:editorconfig": "editorconfig-checker",
-    "lint:formatting": "prettier . --check",
-    "lint:md": "remark . --quiet --frail",
-    "lint:ts": "eslint src/**/*.ts --fix",
-    "prettify": "prettier . --write"
+    "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
   "dependencies": {
     "chalk": "^5.3.0",
     "node-notifier": "^10.0.1"
   },
   "devDependencies": {
-    "@archoleat/commitlint-define-config": "^1.0.9",
-    "@archoleat/eslint-flat-compatibility": "^1.1.6",
-    "@archoleat/prettier-define-config": "^1.0.1",
-    "@archoleat/semantic-release-define-config": "^1.1.14",
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@archoleat/commitlint-define-config": "^1.0.11",
+    "@archoleat/eslint-flat-compatibility": "^1.1.8",
+    "@archoleat/prettier-define-config": "^1.0.2",
+    "@archoleat/semantic-release-define-config": "^1.1.16",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
     "@commitlint/types": "^19.0.3",
     "@rollup/plugin-alias": "^5.1.0",
-    "@rollup/plugin-sucrase": "^5.0.2",
     "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^22.3.0",
+    "@types/node": "^22.5.2",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vitest/coverage-v8": "^2.0.5",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "editorconfig-checker": "^5.1.8",
     "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^2.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-unicorn": "^55.0.0",
     "git-pull-run": "^1.4.0",
     "globals": "^15.9.0",
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.9",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "remark": "15.0.1",
     "remark-cli": "^12.0.1",
     "remark-preset-lint-consistent": "^6.0.0",
     "remark-preset-lint-markdown-style-guide": "^6.0.0",
     "remark-preset-lint-recommended": "^7.0.0",
-    "rollup": "^4.20.0",
+    "rollup": "^4.21.2",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
-    "semantic-release": "^24.0.0",
+    "semantic-release": "^24.1.0",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   }

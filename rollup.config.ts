@@ -6,36 +6,38 @@ import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
 
 import alias from '@rollup/plugin-alias';
-import sucrase from '@rollup/plugin-sucrase';
 import typescript from '@rollup/plugin-typescript';
 
 import copy from 'rollup-plugin-copy';
 
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
-const featuresFolder = `${sourceFolder}/features`;
-const iconsFolder = `${sourceFolder}/icons`;
 const sharedFolder = `${sourceFolder}/shared`;
+const constantsFolder = `${sharedFolder}/constants`;
+const generatorsFolder = `${sharedFolder}/generators`;
+const helpersFolder = `${sharedFolder}/helpers`;
+const iconsFolder = `${sourceFolder}/icons`;
 const typesFolder = `${sharedFolder}/types`;
 
 const fileFormat = 'es';
-const fileName = 'index';
+const entryFileName = 'app';
+const outputFileName = 'index';
 
-const declarationFile = `${fileName}.d.ts`;
-const indexFile = `${fileName}.ts`;
-const outputFile = `${fileName}.js`;
+const declarationFile = `${outputFileName}.d.ts`;
+const entryFile = `${entryFileName}.ts`;
+const outputFile = `${outputFileName}.js`;
 
 export default defineConfig([
   {
     external: ['chalk', 'node-notifier'],
     plugins: [
       copy({
-        targets: [{ src: `${iconsFolder}/*`, dest: `${destinationFolder}/icons` }],
+        targets: [{ src: iconsFolder, dest: destinationFolder }],
       }),
       typescript(),
       minify(),
     ],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
       file: `${destinationFolder}/${outputFile}`,
       format: fileFormat,
@@ -46,23 +48,30 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#features',
-            replacement: resolve(`${featuresFolder}/${indexFile}`),
+            find: '#constants',
+            replacement: resolve(constantsFolder),
+          },
+          {
+            find: '#generators',
+            replacement: resolve(generatorsFolder),
           },
           {
             find: '#shared',
-            replacement: resolve(`${sharedFolder}/${indexFile}`),
+            replacement: resolve(sharedFolder),
+          },
+          {
+            find: '#helpers',
+            replacement: resolve(helpersFolder),
           },
           {
             find: '#types',
-            replacement: resolve(`${typesFolder}/${declarationFile}`),
+            replacement: resolve(typesFolder),
           },
         ],
       }),
-      sucrase({ transforms: ['typescript'] }),
       dts(),
     ],
-    input: `${sourceFolder}/${indexFile}`,
+    input: `${sourceFolder}/${entryFile}`,
     output: {
       file: `${destinationFolder}/${declarationFile}`,
       format: fileFormat,

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
+    // Type Checking
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "disableReferencedProjectLoad": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -14,5 +14,5 @@
   },
   "exclude": ["specs"],
   "extends": ["./tsconfig.node.json"],
-  "include": ["src"]
+  "include": ["src", "global.d.ts"]
 }
