@@ -1,5 +1,5 @@
-import { logLevel } from '#shared/log-level/log-level.ts';
-import { notifier } from '#shared/notifier/notifier.ts';
+import { logLevel } from '../log-level/log-level.ts';
+import { notifier } from '../notifier/notifier.ts';
 
 import type { Parameters } from './parameters.ts';
 

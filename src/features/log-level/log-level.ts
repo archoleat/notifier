@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 
-import { LOG_LEVELS } from '#constants/log-levels.ts';
+import { LOG_LEVELS } from '#shared';
 
-import { notificationGenerator } from '#generators/notification/notification.ts';
+import { notificationGenerator } from '#generators';
 
 import type { Parameters } from './parameters.ts';
 
