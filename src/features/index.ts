@@ -1,1 +1,1 @@
-export { splitter } from './splitter/splitter.ts';
+export { splitter } from './splitter/index.ts';

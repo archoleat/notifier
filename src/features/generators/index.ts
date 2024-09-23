@@ -1,1 +1,1 @@
-export { notificationGenerator } from './notification/notification.ts';
+export { notificationGenerator } from './notification/index.ts';
