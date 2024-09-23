@@ -1,6 +1,8 @@
-export { LOG_LEVELS } from './constants/log-levels.ts';
+export { LOG_LEVELS } from './constants/index.ts';
 
-export type { HasTime } from './types/has-time.ts';
-export type { Message } from './types/message.ts';
-export type { NotificationMode } from './types/notification-mode.ts';
-export type { Parameters } from './types/parameters.ts';
+export type {
+  HasTime,
+  Message,
+  NotificationMode,
+  Parameters,
+} from './types/index.ts';
