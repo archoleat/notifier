@@ -7,7 +7,8 @@ import type { Parameters } from '#shared';
 /**
  * Handles an success.
  *
- * @param {string} message - The success message.
+ * @param {string|array} message - The success message,
+ * @prop {''} or @prop {['', { length: number }]}.
  *
  * @param {boolean} [hasTime=true] - Indicates if the success has a timestamp.
  *

@@ -6,19 +6,6 @@ import { notificationGenerator } from '#generators';
 
 import type { Parameters } from './parameters.ts';
 
-/**
- * Logs a message with a specified log level.
- *
- * @param {string} message - The message to be logged.
- *
- * @param {string} title - The log level of the message.
- *
- * @param {boolean} hasTime - Indicates if the log should
- * include a timestamp.
- *
- * @return {void} - Logs the message with the specified log level
- * using console methods.
- */
 const logLevel = async (parameters: Parameters) => {
   const { message, title, hasTime } = parameters;
 

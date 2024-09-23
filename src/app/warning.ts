@@ -7,7 +7,8 @@ import type { Parameters } from '#shared';
 /**
  * Handles an warning.
  *
- * @param {string} message - The warning message.
+ * @param {string|array} message - The warning message,
+ * @prop {''} or @prop {['', { length: number }]}.
  *
  * @param {boolean} [hasTime=true] - Indicates if the warning has a timestamp.
  *

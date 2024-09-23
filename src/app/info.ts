@@ -7,7 +7,8 @@ import type { Parameters } from '#shared';
 /**
  * Handles an info.
  *
- * @param {string} message - The info message.
+ * @param {string|array} message - The info message,
+ * @prop {''} or @prop {['', { length: number }]}.
  *
  * @param {boolean} [hasTime=true] - Indicates if the info has a timestamp.
  *

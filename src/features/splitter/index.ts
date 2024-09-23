@@ -3,23 +3,6 @@ import { notifier } from '../notifier/index.ts';
 
 import type { Parameters } from './parameters.ts';
 
-/**
- * Splits the notification based on the notification mode
- * and performs the corresponding action.
- *
- * @param {string} icon - The icon for the notification.
- *
- * @param {string} title - The title of the notification.
- *
- * @param {string} message - The message content of the notification.
- *
- * @param {boolean} hasTime - Indicates if the notification includes a timestamp.
- *
- * @param {string} notificationMode - The mode of notification
- * ('console', 'desktop' or 'multiple').
- *
- * @returns {Object|Array} - The result of the notification action based on the mode.
- */
 const splitter = async (parameters: Parameters) => {
   const { icon, title, message, hasTime, notificationMode } = parameters;
 
