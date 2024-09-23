@@ -47,8 +47,7 @@
     "dist"
   ],
   "scripts": {
-    "init": "pnpm i && husky",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript"
+    "init": "pnpm i && husky"
   },
   "dependencies": {
     "chalk": "^5.3.0",
