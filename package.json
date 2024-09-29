@@ -33,11 +33,12 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
-    "#constants/*": "./src/shared/constants/*",
-    "#generators/*": "./src/shared/generators/*",
-    "#helpers/*": "./src/shared/helpers/*",
-    "#shared/*": "./src/shared/*",
-    "#types/*": "./src/shared/types/*"
+    "#app": "./src/app/index.ts",
+    "#features": "./src/features/index.ts",
+    "#generators": "./src/features/generators/index.ts",
+    "#helpers": "./src/features/helpers/index.ts",
+    "#index": "./src/index.ts",
+    "#shared": "./src/shared/index.ts"
   },
   "exports": {
     ".": "./dist/index.js"
@@ -46,8 +47,7 @@
     "dist"
   ],
   "scripts": {
-    "init": "pnpm i && husky",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript"
+    "init": "pnpm i && husky"
   },
   "dependencies": {
     "chalk": "^5.3.0",

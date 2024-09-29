@@ -1,13 +1,14 @@
-import { LOG_LEVELS } from '#constants/log-levels.ts';
+import { LOG_LEVELS } from '#shared';
 
-import { splitter } from '#helpers/splitter/splitter.ts';
+import { splitter } from '#features';
 
-import type { Parameters } from '#types/parameters.ts';
+import type { Parameters } from '#shared';
 
 /**
  * Handles an error.
  *
- * @param {string} message - The error message.
+ * @param {string|array} message - The error message,
+ * @prop {''} or @prop {['', { length: number }]}.
  *
  * @param {boolean} [hasTime=true] - Indicates if the error has a timestamp.
  *

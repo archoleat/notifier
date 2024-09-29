@@ -1,5 +1,4 @@
-import type { Message } from '#types/message.ts';
-import type { NotificationMode } from '#types/notification-mode.ts';
+import type { Message, NotificationMode } from '#shared';
 
 type Parameters = {
   icon: string;

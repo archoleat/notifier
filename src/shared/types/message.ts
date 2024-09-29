@@ -1,3 +1,3 @@
-type Message = string | [string, { length: number }];
+type Message = string | [string, { maxLength: number }];
 
 export type { Message };

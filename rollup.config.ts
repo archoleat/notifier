@@ -12,20 +12,21 @@ import copy from 'rollup-plugin-copy';
 
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
-const sharedFolder = `${sourceFolder}/shared`;
-const constantsFolder = `${sharedFolder}/constants`;
-const generatorsFolder = `${sharedFolder}/generators`;
-const helpersFolder = `${sharedFolder}/helpers`;
+
+const appFolder = `${sourceFolder}/app`;
+const featuresFolder = `${sourceFolder}/features`;
 const iconsFolder = `${sourceFolder}/icons`;
-const typesFolder = `${sharedFolder}/types`;
+const sharedFolder = `${sourceFolder}/shared`;
+
+const generatorsFolder = `${featuresFolder}/generators`;
+const helpersFolder = `${featuresFolder}/helpers`;
 
 const fileFormat = 'es';
-const entryFileName = 'app';
-const outputFileName = 'index';
+const fileName = 'index';
 
-const declarationFile = `${outputFileName}.d.ts`;
-const entryFile = `${entryFileName}.ts`;
-const outputFile = `${outputFileName}.js`;
+const declarationFile = `${fileName}.d.ts`;
+const entryFile = `${fileName}.ts`;
+const outputFile = `${fileName}.js`;
 
 export default defineConfig([
   {
@@ -48,24 +49,24 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#constants',
-            replacement: resolve(constantsFolder),
+            find: '#app',
+            replacement: resolve(`${appFolder}/${entryFile}`),
+          },
+          {
+            find: '#features',
+            replacement: resolve(`${featuresFolder}/${entryFile}`),
           },
           {
             find: '#generators',
-            replacement: resolve(generatorsFolder),
-          },
-          {
-            find: '#shared',
-            replacement: resolve(sharedFolder),
+            replacement: resolve(`${generatorsFolder}/${entryFile}`),
           },
           {
             find: '#helpers',
-            replacement: resolve(helpersFolder),
+            replacement: resolve(`${helpersFolder}/${entryFile}`),
           },
           {
-            find: '#types',
-            replacement: resolve(typesFolder),
+            find: '#shared',
+            replacement: resolve(`${sharedFolder}/${entryFile}`),
           },
         ],
       }),

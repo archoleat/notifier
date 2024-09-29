@@ -37,7 +37,7 @@ await info({
     [
       '',
       {
-        length: Infinity // Truncates the message after a specified number of characters.
+        maxLength: Infinity // Truncates the message after a specified number of characters.
       },
     ]
     | ['']
