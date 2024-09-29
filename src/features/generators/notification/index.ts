@@ -7,10 +7,11 @@ import type { Parameters } from './parameters.ts';
 const notificationGenerator = async (parameters: Parameters) => {
   const { message, title, hasTime } = parameters;
 
-  const time = hasTime ? `${chalk.gray(await currentTime())} ` : '';
+  const timestamp = hasTime ? `${chalk.gray(await currentTime())} ` : '';
+  const upperCaseTitle = title.toUpperCase();
   const text = await truncate({ message });
 
-  return `${time}[${title.toUpperCase()}] ${text}`;
+  return `${timestamp}[${upperCaseTitle}] ${text}`;
 };
 
 export { notificationGenerator };
