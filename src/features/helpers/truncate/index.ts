@@ -3,9 +3,8 @@ import type { Parameters } from './parameters.ts';
 const truncate = async (parameters: Parameters) => {
   const { message } = parameters;
 
-  let string;
-
   if (Array.isArray(message)) {
+    let string = '';
     let maxLength = Infinity;
 
     [string, { maxLength = maxLength } = {}] = message;
