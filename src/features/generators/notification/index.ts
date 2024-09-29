@@ -8,9 +8,9 @@ const notificationGenerator = async (parameters: Parameters) => {
   const { message, title, hasTime } = parameters;
 
   const time = hasTime ? `${chalk.gray(await currentTime())} ` : '';
-  const body = await truncate({ message });
+  const text = await truncate({ message });
 
-  return `${time}[${title.toUpperCase()}] ${body}`;
+  return `${time}[${title.toUpperCase()}] ${text}`;
 };
 
 export { notificationGenerator };
