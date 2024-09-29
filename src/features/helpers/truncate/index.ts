@@ -6,10 +6,10 @@ const truncate = async (parameters: Parameters) => {
   if (Array.isArray(message)) {
     const [string, { maxLength = Infinity } = {}] = message;
 
-    const truncatedMessage = string.slice(0, maxLength);
+    const body = string.slice(0, maxLength);
     const dots = maxLength === Infinity ? '' : '...';
 
-    return `${truncatedMessage}${dots}`;
+    return `${body}${dots}`;
   }
 
   return message;
