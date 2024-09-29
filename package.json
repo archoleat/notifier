@@ -44,7 +44,9 @@
     ".": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist/icons",
+    "dist/index.d.ts",
+    "dist/index.js"
   ],
   "scripts": {
     "init": "pnpm i && husky"
