@@ -4,19 +4,19 @@ const truncate = async (parameters: Parameters) => {
   const { message } = parameters;
 
   let string;
-  let length = Infinity;
 
   if (Array.isArray(message)) {
-    [string, { length = Infinity } = {}] = message;
-  } else {
-    string = message;
+    let maxLength = Infinity;
+
+    [string, { maxLength = maxLength } = {}] = message;
+
+    const truncatedMessage = string.slice(0, maxLength);
+    const dots = maxLength === Infinity ? '' : '...';
+
+    return `${truncatedMessage}${dots}`;
   }
 
-  if (string.length > length) {
-    return `${string.slice(0, Math.max(0, length))}...`;
-  }
-
-  return string;
+  return message;
 };
 
 export { truncate };
