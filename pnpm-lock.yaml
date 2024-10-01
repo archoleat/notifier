@@ -64,8 +64,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0
       editorconfig-checker:
-        specifier: ^5.1.8
-        version: 5.1.8
+        specifier: ^6.0.0
+        version: 6.0.0
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -1390,9 +1390,9 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  editorconfig-checker@5.1.8:
-    resolution: {integrity: sha512-GM/qCbXA8GajSqqjXiWZN49i0nizQV5PjkVKIwWB9rtsm/pztjnBC+4dts5wW2KdrP2zyMPEltWHtWQwoCadqg==}
-    engines: {node: '>=18.0.0'}
+  editorconfig-checker@6.0.0:
+    resolution: {integrity: sha512-uyTOwLJzR/k7ugiu7ITjCzkLKBhXeirQZ8hGlUkt1u/hq2Qu1E8EslgFZDN+lxZoQc97eiI87sUFgVILK4P+YQ==}
+    engines: {node: '>=20.11.0'}
     hasBin: true
 
   electron-to-chromium@1.5.13:
@@ -5419,7 +5419,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  editorconfig-checker@5.1.8: {}
+  editorconfig-checker@6.0.0: {}
 
   electron-to-chromium@1.5.13: {}
 
