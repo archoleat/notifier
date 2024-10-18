@@ -1,29 +1,21 @@
-import { resolve } from 'node:path';
-
 import { defineConfig } from 'rollup';
-
 import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
-
+import { resolve } from 'node:path';
 import alias from '@rollup/plugin-alias';
-import typescript from '@rollup/plugin-typescript';
-
 import copy from 'rollup-plugin-copy';
+import typescript from '@rollup/plugin-typescript';
 
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
-
 const appFolder = `${sourceFolder}/app`;
 const featuresFolder = `${sourceFolder}/features`;
 const iconsFolder = `${sourceFolder}/icons`;
 const sharedFolder = `${sourceFolder}/shared`;
-
 const generatorsFolder = `${featuresFolder}/generators`;
 const helpersFolder = `${featuresFolder}/helpers`;
-
 const fileFormat = 'es';
 const fileName = 'index';
-
 const declarationFile = `${fileName}.d.ts`;
 const entryFile = `${fileName}.ts`;
 const outputFile = `${fileName}.js`;

@@ -1,8 +1,6 @@
-import { LOG_LEVELS } from '#shared';
-
 import { splitter } from '#features';
-
 import type { Parameters } from '#shared';
+import { LOG_LEVELS } from '#shared';
 
 /**
  * Handles an warning.
