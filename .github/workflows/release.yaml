@@ -52,7 +52,7 @@ jobs:
         run: pnpm rollup -c rollup.config.ts --configPlugin typescript
 
       - name: Sanitize
-        run: rm -rf 'dist/{app,features,shared}'
+        run: rm -rf 'dist/{config,utils,data}'
 
       - name: Prettify
         run: pnpm prettier 'dist/index.d.ts' --write
