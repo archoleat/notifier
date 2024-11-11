@@ -8,12 +8,12 @@ import typescript from '@rollup/plugin-typescript';
 
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
-const appFolder = `${sourceFolder}/app`;
-const featuresFolder = `${sourceFolder}/features`;
+const configFolder = `${sourceFolder}/config`;
+const utilsFolder = `${sourceFolder}/utils`;
 const iconsFolder = `${sourceFolder}/icons`;
-const sharedFolder = `${sourceFolder}/shared`;
-const generatorsFolder = `${featuresFolder}/generators`;
-const helpersFolder = `${featuresFolder}/helpers`;
+const dataFolder = `${sourceFolder}/data`;
+const generatorsFolder = `${dataFolder}/generators`;
+const helpersFolder = `${dataFolder}/helpers`;
 const fileFormat = 'es';
 const fileName = 'index';
 const declarationFile = `${fileName}.d.ts`;
@@ -41,12 +41,12 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#app',
-            replacement: resolve(`${appFolder}/${entryFile}`),
+            find: '#config',
+            replacement: resolve(`${configFolder}/${entryFile}`),
           },
           {
-            find: '#features',
-            replacement: resolve(`${featuresFolder}/${entryFile}`),
+            find: '#utils',
+            replacement: resolve(`${utilsFolder}/${entryFile}`),
           },
           {
             find: '#generators',
@@ -57,8 +57,8 @@ export default defineConfig([
             replacement: resolve(`${helpersFolder}/${entryFile}`),
           },
           {
-            find: '#shared',
-            replacement: resolve(`${sharedFolder}/${entryFile}`),
+            find: '#data',
+            replacement: resolve(`${dataFolder}/${entryFile}`),
           },
         ],
       }),

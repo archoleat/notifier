@@ -1,4 +1,4 @@
-import type { HasTime, Message } from '#shared';
+import type { HasTime, Message } from '../../data/index.ts';
 
 type Parameters = {
   message: Message;

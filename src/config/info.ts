@@ -1,6 +1,7 @@
 import { splitter } from '#features';
-import type { Parameters } from '#shared';
-import { LOG_LEVELS } from '#shared';
+
+import type { Parameters } from '../data/index.ts';
+import { LOG_LEVELS } from '../data/index.ts';
 
 /**
  * Handles an info.

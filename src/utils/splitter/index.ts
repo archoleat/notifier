@@ -1,6 +1,5 @@
 import { logLevel } from '../log-level/index.ts';
 import { notifier } from '../notifier/index.ts';
-
 import type { Parameters } from './parameters.ts';
 
 const splitter = async (parameters: Parameters) => {

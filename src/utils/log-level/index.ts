@@ -1,9 +1,8 @@
 import chalk from 'chalk';
 
-import { LOG_LEVELS } from '#shared';
-
 import { notificationGenerator } from '#generators';
 
+import { LOG_LEVELS } from '../../data/index.ts';
 import type { Parameters } from './parameters.ts';
 
 const logLevel = async (parameters: Parameters) => {
