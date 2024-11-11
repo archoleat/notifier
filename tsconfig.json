@@ -14,5 +14,5 @@
   },
   "exclude": ["specs"],
   "extends": ["./tsconfig.node.json"],
-  "include": ["src", "global.d.ts"]
+  "include": ["src"]
 }

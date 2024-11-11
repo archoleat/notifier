@@ -1,31 +1,24 @@
-import { resolve } from 'node:path';
-
 import { defineConfig } from 'rollup';
-
 import { dts } from 'rollup-plugin-dts';
 import { minify } from 'rollup-plugin-esbuild';
-
+import { resolve } from 'node:path';
 import alias from '@rollup/plugin-alias';
-import typescript from '@rollup/plugin-typescript';
-
 import copy from 'rollup-plugin-copy';
+import typescript from '@rollup/plugin-typescript';
 
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
-const sharedFolder = `${sourceFolder}/shared`;
-const constantsFolder = `${sharedFolder}/constants`;
-const generatorsFolder = `${sharedFolder}/generators`;
-const helpersFolder = `${sharedFolder}/helpers`;
+const configFolder = `${sourceFolder}/config`;
+const utilsFolder = `${sourceFolder}/utils`;
 const iconsFolder = `${sourceFolder}/icons`;
-const typesFolder = `${sharedFolder}/types`;
-
+const dataFolder = `${sourceFolder}/data`;
+const generatorsFolder = `${dataFolder}/generators`;
+const helpersFolder = `${dataFolder}/helpers`;
 const fileFormat = 'es';
-const entryFileName = 'app';
-const outputFileName = 'index';
-
-const declarationFile = `${outputFileName}.d.ts`;
-const entryFile = `${entryFileName}.ts`;
-const outputFile = `${outputFileName}.js`;
+const fileName = 'index';
+const declarationFile = `${fileName}.d.ts`;
+const entryFile = `${fileName}.ts`;
+const outputFile = `${fileName}.js`;
 
 export default defineConfig([
   {
@@ -48,24 +41,24 @@ export default defineConfig([
       alias({
         entries: [
           {
-            find: '#constants',
-            replacement: resolve(constantsFolder),
+            find: '#config',
+            replacement: resolve(`${configFolder}/${entryFile}`),
+          },
+          {
+            find: '#utils',
+            replacement: resolve(`${utilsFolder}/${entryFile}`),
           },
           {
             find: '#generators',
-            replacement: resolve(generatorsFolder),
-          },
-          {
-            find: '#shared',
-            replacement: resolve(sharedFolder),
+            replacement: resolve(`${generatorsFolder}/${entryFile}`),
           },
           {
             find: '#helpers',
-            replacement: resolve(helpersFolder),
+            replacement: resolve(`${helpersFolder}/${entryFile}`),
           },
           {
-            find: '#types',
-            replacement: resolve(typesFolder),
+            find: '#data',
+            replacement: resolve(`${dataFolder}/${entryFile}`),
           },
         ],
       }),

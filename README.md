@@ -4,7 +4,6 @@
 ![NPM Downloads](https://img.shields.io/npm/dm/%40archoleat%2Fnotifier)
 ![ESM](https://img.shields.io/badge/ESM-fe0)
 ![Provenance](https://img.shields.io/badge/Provenance-fo0)
-![CodeQL](https://img.shields.io/github/actions/workflow/status/archoleat/notifier/codeql.yaml?label=CodeQL)
 ![Specs](https://img.shields.io/github/actions/workflow/status/archoleat/notifier/spec.yaml?label=Specs)
 ![Commitlint](https://img.shields.io/github/actions/workflow/status/archoleat/notifier/commitlint.yaml?label=Commitlint)
 ![Editorconfig](https://img.shields.io/github/actions/workflow/status/archoleat/notifier/editorconfig.yaml?label=Editorconfig)
@@ -19,8 +18,6 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-A small, simple and customizable notifier for your projects.
-
 ## Installation
 
 ```shell
@@ -33,17 +30,13 @@ bun i -D @archoleat/notifier
 import { error, info, success, warning } from '@archoleat/notifier';
 
 await info({
-  message:
-    [
-      '',
-      {
-        length: Infinity // Truncates the message after a specified number of characters.
-      },
-    ]
-    | ['']
-    | '',
-  hasTime: true, // Enable/disable time, not work in desktop mode.
-  notificationMode: 'console', // Available modes: console, desktop, multiple.
+  message: 'string' | ['string', { maxLength: number }],
+  // Enable/disable timestamp, not work in desktop mode.
+  // @default true.
+  hasTime: boolean,
+  // Available modes: console, desktop, multiple.
+  // @default 'console'.
+  notificationMode: 'console' | 'desktop' | 'multiple',
 });
 ```
 

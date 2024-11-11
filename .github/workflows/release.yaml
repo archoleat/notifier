@@ -49,12 +49,12 @@ jobs:
         run: pnpm i
 
       - name: Build
-        run: pnpm build
+        run: pnpm rollup -c rollup.config.ts --configPlugin typescript
 
       - name: Sanitize
-        run: rm -rf 'dist/{features,shared} app.d.ts'
+        run: rm -rf 'dist/{config,utils,data}'
 
-      - name: Pretty
+      - name: Prettify
         run: pnpm prettier 'dist/index.d.ts' --write
 
       - name: Create Release

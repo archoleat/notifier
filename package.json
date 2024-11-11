@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/notifier",
-  "description": "Simple notifier for plugins or bundlers",
+  "description": "A small, simple and customizable notifier for your projects",
   "version": "1.0.3",
   "license": "MIT",
   "author": {
@@ -33,55 +33,58 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
-    "#constants/*": "./src/shared/constants/*",
-    "#generators/*": "./src/shared/generators/*",
-    "#helpers/*": "./src/shared/helpers/*",
-    "#shared/*": "./src/shared/*",
-    "#types/*": "./src/shared/types/*"
+    "#config": "./src/config/index.ts",
+    "#utils": "./src/utils/index.ts",
+    "#generators": "./src/utils/generators/index.ts",
+    "#helpers": "./src/utils/helpers/index.ts",
+    "#index": "./src/index.ts",
+    "#data": "./src/data/index.ts"
   },
   "exports": {
     ".": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist/icons",
+    "dist/index.d.ts",
+    "dist/index.js"
   ],
   "scripts": {
-    "init": "pnpm i && husky",
-    "build": "rollup -c rollup.config.ts --configPlugin typescript"
+    "init": "pnpm i && husky"
   },
   "dependencies": {
     "chalk": "^5.3.0",
     "node-notifier": "^10.0.1"
   },
   "devDependencies": {
-    "@archoleat/commitlint-define-config": "^1.0.11",
-    "@archoleat/eslint-flat-compatibility": "^1.1.8",
-    "@archoleat/prettier-define-config": "^1.0.2",
-    "@archoleat/semantic-release-define-config": "^1.1.16",
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
-    "@commitlint/types": "^19.0.3",
-    "@rollup/plugin-alias": "^5.1.0",
-    "@rollup/plugin-typescript": "^11.1.6",
+    "@archoleat/commitlint-define-config": "^1.1.0",
+    "@archoleat/eslint-flat-compatibility": "^1.2.1",
+    "@archoleat/prettier-define-config": "^1.1.0",
+    "@archoleat/semantic-release-define-config": "^1.2.0",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/types": "^19.5.0",
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-typescript": "^12.1.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^22.5.2",
+    "@types/node": "^22.8.6",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
-    "@vitest/coverage-v8": "^2.0.5",
+    "@vitest/coverage-v8": "^2.1.4",
     "conventional-changelog-conventionalcommits": "^8.0.0",
-    "editorconfig-checker": "^5.1.8",
-    "eslint": "^8.57.0",
+    "editorconfig-checker": "^6.0.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^2.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-unicorn": "^55.0.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^56.0.0",
     "git-pull-run": "^1.4.0",
-    "globals": "^15.9.0",
-    "husky": "^9.1.5",
+    "globals": "^15.11.0",
+    "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "remark": "15.0.1",
@@ -89,12 +92,12 @@
     "remark-preset-lint-consistent": "^6.0.0",
     "remark-preset-lint-markdown-style-guide": "^6.0.0",
     "remark-preset-lint-recommended": "^7.0.0",
-    "rollup": "^4.21.2",
+    "rollup": "^4.24.3",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
-    "semantic-release": "^24.1.0",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "semantic-release": "^24.2.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
   }
 }

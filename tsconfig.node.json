@@ -14,11 +14,11 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "paths": {
-      "#constants/*": ["./src/shared/constants/*"],
-      "#generators/*": ["./src/shared/generators/*"],
-      "#helpers/*": ["./src/shared/helpers/*"],
-      "#shared/*": ["./src/shared/*"],
-      "#types/*": ["./src/shared/types/*"]
+      "#config": ["./src/config/index.ts"],
+      "#utils": ["./src/utils/index.ts"],
+      "#generators": ["./src/utils/generators/index.ts"],
+      "#helpers": ["./src/utils/helpers/index.ts"],
+      "#data": ["./src/data/index.ts"]
     },
     "rootDir": "src",
     "types": ["chalk", "node", "vitest"],
