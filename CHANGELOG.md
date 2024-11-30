@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.0](https://github.com/archoleat/notifier/compare/v1.0.3...v1.1.0) (2024-11-30)
+
+### Features
+
+* add specs ([#35](https://github.com/archoleat/notifier/issues/35)) ([a1a49bb](https://github.com/archoleat/notifier/commit/a1a49bb1a351d91167f2d40151cdf292b1c48a2d))
+
+### Bug Fixes
+
+* paths ([#49](https://github.com/archoleat/notifier/issues/49)) ([ff362c1](https://github.com/archoleat/notifier/commit/ff362c19800c3c64f47273269ec2076de553e16a))
+
+### Code Refactoring
+
+* eslint config ([#47](https://github.com/archoleat/notifier/issues/47)) ([2b9ffc3](https://github.com/archoleat/notifier/commit/2b9ffc3f1c56631c0ac48e085a3c880d2d492291))
+* small changes ([#46](https://github.com/archoleat/notifier/issues/46)) ([56ef2f9](https://github.com/archoleat/notifier/commit/56ef2f90d1e03f908e5c9a01257fcfdffcdf5934))
+
+### Documentation
+
+* **readme:** remove extra badges ([#48](https://github.com/archoleat/notifier/issues/48)) ([aaf5a04](https://github.com/archoleat/notifier/commit/aaf5a04202e1da86b1383165ec31d1fb9457a90d))
+
 ## [1.0.3](https://github.com/archoleat/notifier/compare/v1.0.2...v1.0.3) (2024-09-23)
 
 ### Bug Fixes
