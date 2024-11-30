@@ -22,7 +22,7 @@ const outputFile = `${fileName}.js`;
 
 export default defineConfig([
   {
-    external: ['chalk', 'node-notifier'],
+    external: ['chalk', 'node-notifier', 'node:path'],
     plugins: [
       copy({
         targets: [{ src: iconsFolder, dest: destinationFolder }],
