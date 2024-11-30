@@ -1,4 +1,4 @@
-import { splitter } from '#features';
+import { splitter } from '#utils';
 
 import type { Parameters } from '../data/index.ts';
 import { LOG_LEVELS } from '../data/index.ts';
