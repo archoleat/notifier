@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1](https://github.com/archoleat/notifier/compare/v1.1.0...v1.1.1) (2024-12-01)
+
+### Code Refactoring
+
+* small changes ([#54](https://github.com/archoleat/notifier/issues/54)) ([f573cc3](https://github.com/archoleat/notifier/commit/f573cc34271e45b0171beea19d91f5a3ddab28a4))
+
 ## [1.1.0](https://github.com/archoleat/notifier/compare/v1.0.3...v1.1.0) (2024-11-30)
 
 ### Features
