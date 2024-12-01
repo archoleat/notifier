@@ -34,8 +34,6 @@ export default defineFlatConfig([
       unicorn: unicornPlugin,
     },
     rules: {
-      'simple-import-sort/imports': 'warn',
-      'simple-import-sort/exports': 'warn',
       'import/exports-last': 'error',
       'import/extensions': ['error', { ts: 'always' }],
       'import/group-exports': 'error',
@@ -44,6 +42,8 @@ export default defineFlatConfig([
       'import/no-namespace': 'error',
       'import/no-unassigned-import': 'error',
       'import/prefer-default-export': 'off',
+      'simple-import-sort/exports': 'warn',
+      'simple-import-sort/imports': 'warn',
       'unicorn/no-unused-properties': 'warn',
     },
   },

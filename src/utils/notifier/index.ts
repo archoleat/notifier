@@ -1,5 +1,3 @@
-import { resolve } from 'node:path';
-
 import Notifier from 'node-notifier';
 
 import { truncate } from '#helpers';
@@ -10,7 +8,7 @@ const notifier = async (parameters: Parameters) => {
   const { icon, message, title } = parameters;
 
   return Notifier.notify({
-    icon: resolve(`dist/icons/${icon}.png`),
+    icon: `./icons/${icon}.png`,
     message: await truncate({ message }),
     title: title.toUpperCase(),
   });
