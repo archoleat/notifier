@@ -1,7 +1,6 @@
-import { splitter } from '#utils';
-
-import type { Parameters } from '../data/index.ts';
-import { LOG_LEVELS } from '../data/index.ts';
+import { LOG_LEVELS } from '#constants/log-levels.ts';
+import type { Parameters } from '#types/parameters.ts';
+import { splitter } from '#utils/splitter/splitter.ts';
 
 /**
  * Handles an info.

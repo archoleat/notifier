@@ -1,4 +1,5 @@
-import type { HasTime, Message } from '../../data/index.ts';
+import type { HasTime } from '#types/has-time.ts';
+import type { Message } from '#types/message.ts';
 
 type Parameters = {
   message: Message;

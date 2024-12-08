@@ -9,11 +9,12 @@ import typescript from '@rollup/plugin-typescript';
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
 const configFolder = `${sourceFolder}/config`;
-const utilsFolder = `${sourceFolder}/utils`;
+const constantsFolder = `${sourceFolder}/data/constants`;
 const iconsFolder = `${sourceFolder}/icons`;
-const dataFolder = `${sourceFolder}/data`;
-const generatorsFolder = `${dataFolder}/generators`;
-const helpersFolder = `${dataFolder}/helpers`;
+const typesFolder = `${sourceFolder}/data/types`;
+const utilsFolder = `${sourceFolder}/utils`;
+const generatorsFolder = `${utilsFolder}/generators`;
+const helpersFolder = `${utilsFolder}/helpers`;
 const fileFormat = 'es';
 const fileName = 'index';
 const declarationFile = `${fileName}.d.ts`;
@@ -42,23 +43,27 @@ export default defineConfig([
         entries: [
           {
             find: '#config',
-            replacement: resolve(`${configFolder}/${entryFile}`),
+            replacement: resolve(`${configFolder}/`),
           },
           {
-            find: '#utils',
-            replacement: resolve(`${utilsFolder}/${entryFile}`),
+            find: '#constants',
+            replacement: resolve(`${constantsFolder}/`),
           },
           {
             find: '#generators',
-            replacement: resolve(`${generatorsFolder}/${entryFile}`),
+            replacement: resolve(`${generatorsFolder}/`),
           },
           {
             find: '#helpers',
-            replacement: resolve(`${helpersFolder}/${entryFile}`),
+            replacement: resolve(`${helpersFolder}/`),
           },
           {
-            find: '#data',
-            replacement: resolve(`${dataFolder}/${entryFile}`),
+            find: '#types',
+            replacement: resolve(`${typesFolder}/`),
+          },
+          {
+            find: '#utils',
+            replacement: resolve(`${utilsFolder}/`),
           },
         ],
       }),
