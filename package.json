@@ -33,12 +33,13 @@
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
-    "#config": "./src/config/index.ts",
-    "#utils": "./src/utils/index.ts",
-    "#generators": "./src/utils/generators/index.ts",
-    "#helpers": "./src/utils/helpers/index.ts",
-    "#index": "./src/index.ts",
-    "#data": "./src/data/index.ts"
+    "#config/*": "./src/config/*",
+    "#constants/*": "./src/data/constants/*",
+    "#generators/*": "./src/utils/generators/*",
+    "#helpers/*": "./src/utils/helpers/*",
+    "#src": "./src/*",
+    "#types/*": "./src/data/types/*",
+    "#utils/*": "./src/utils/*"
   },
   "exports": {
     ".": "./dist/index.js"

@@ -1,4 +1,4 @@
-import type { Message } from '../../../data/index.ts';
+import type { Message } from '#types/message.ts';
 
 type Parameters = {
   message: Message;
