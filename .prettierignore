@@ -1,10 +1,8 @@
 # Files
 *.md
-pnpm-lock.yaml
 
 # *rc
 .ecrc
-
 
 # Ignores
 .gitignore
