@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.3](https://github.com/archoleat/notifier/compare/v1.1.2...v1.1.3) (2025-01-09)
+
+### ⚠ BREAKING CHANGES
+
+* migrate to bun (#57)
+
+### Bug Fixes
+
+* icons ([#64](https://github.com/archoleat/notifier/issues/64)) ([91dbe8d](https://github.com/archoleat/notifier/commit/91dbe8d83b33f6d7380fe2b4e005480013cded18))
+
+### Code Refactoring
+
+* comments ([#65](https://github.com/archoleat/notifier/issues/65)) ([8c5cf21](https://github.com/archoleat/notifier/commit/8c5cf21c5dbf7ee68f6315ddf78d1fbe663043d6))
+* migrate to bun ([#57](https://github.com/archoleat/notifier/issues/57)) ([6c5b19a](https://github.com/archoleat/notifier/commit/6c5b19a6377677e702d981c4f2b0801c24dd7a43))
+* prettierignore ([#56](https://github.com/archoleat/notifier/issues/56)) ([30cd580](https://github.com/archoleat/notifier/commit/30cd5807c6fd883ee5d18e588cc10769672fa803))
+
 ## [1.1.2](https://github.com/archoleat/notifier/compare/v1.1.1...v1.1.2) (2024-12-08)
 
 ### Code Refactoring
