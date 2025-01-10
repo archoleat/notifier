@@ -33,7 +33,6 @@
   "imports": {
     "#config/*": "./src/config/*",
     "#constants/*": "./src/data/constants/*",
-    "#generators/*": "./src/utils/generators/*",
     "#helpers/*": "./src/utils/helpers/*",
     "#src": "./src/*",
     "#types/*": "./src/data/types/*",
