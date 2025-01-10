@@ -1,6 +1,6 @@
 import { expect, describe, it, mock } from 'bun:test';
 import { success } from '#config/success.ts';
-import { LOG_LEVELS } from '#constants/log-levels.ts';
+import { LOG_LEVEL } from '#constants/log-level.ts';
 import type { NotificationMode } from '#types/notification-mode.ts';
 import type { TestCaseTypes } from './types/test-case.ts';
 
@@ -12,8 +12,8 @@ describe('success function', () => {
   const defaultParams = {
     hasTime: true,
     notificationMode: 'console' as NotificationMode,
-    icon: LOG_LEVELS.SUCCESS,
-    title: LOG_LEVELS.SUCCESS,
+    icon: LOG_LEVEL.SUCCESS,
+    title: LOG_LEVEL.SUCCESS,
   };
 
   const testCases: TestCaseTypes[] = [

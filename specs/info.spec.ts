@@ -1,6 +1,6 @@
 import { expect, describe, it, mock } from 'bun:test';
 import { info } from '#config/info.ts';
-import { LOG_LEVELS } from '#constants/log-levels.ts';
+import { LOG_LEVEL } from '#constants/log-level.ts';
 import type { NotificationMode } from '#types/notification-mode.ts';
 import type { TestCaseTypes } from './types/test-case.ts';
 
@@ -12,8 +12,8 @@ describe('info function', () => {
   const defaultParams = {
     hasTime: true,
     notificationMode: 'console' as NotificationMode,
-    icon: LOG_LEVELS.INFO,
-    title: LOG_LEVELS.INFO,
+    icon: LOG_LEVEL.INFO,
+    title: LOG_LEVEL.INFO,
   };
 
   const testCases: TestCaseTypes[] = [
