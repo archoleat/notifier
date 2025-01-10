@@ -1,4 +1,4 @@
-import { resolve } from 'node:path';
+import { join } from 'node:path';
 
 import Notifier from 'node-notifier';
 
@@ -9,10 +9,8 @@ import type { Parameters } from './parameters.ts';
 const notifier = async (parameters: Parameters) => {
   const { icon, message, title } = parameters;
 
-  const imageExtension = process.platform === 'win32' ? 'ico' : 'png';
-
   return Notifier.notify({
-    icon: resolve(__dirname, 'icons', `${icon}.${imageExtension}`),
+    icon: join(__dirname, 'icons', `${icon}.png`),
     message: await truncate({ message }),
     title: title.toUpperCase(),
   });
