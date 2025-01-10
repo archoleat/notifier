@@ -21,7 +21,7 @@
       "#utils/*": ["./src/utils/*"]
     },
     "rootDir": "src",
-    "types": ["chalk", "node", "vitest"],
+    "types": ["chalk", "node"],
     // Projects
     "disableReferencedProjectLoad": true,
     // Type Checking
