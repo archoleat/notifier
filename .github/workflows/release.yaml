@@ -3,7 +3,7 @@ name: Release
 on:
   workflow_run:
     workflows:
-      - ESLint
+      - Spec
     types:
       - completed
   push:

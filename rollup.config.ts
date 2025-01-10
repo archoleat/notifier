@@ -13,7 +13,6 @@ const constantsFolder = `${sourceFolder}/data/constants`;
 const iconsFolder = `${sourceFolder}/icons`;
 const typesFolder = `${sourceFolder}/data/types`;
 const utilsFolder = `${sourceFolder}/utils`;
-const generatorsFolder = `${utilsFolder}/generators`;
 const helpersFolder = `${utilsFolder}/helpers`;
 const fileFormat = 'es';
 const fileName = 'index';
@@ -48,10 +47,6 @@ export default defineConfig([
           {
             find: '#constants',
             replacement: resolve(`${constantsFolder}/`),
-          },
-          {
-            find: '#generators',
-            replacement: resolve(`${generatorsFolder}/`),
           },
           {
             find: '#helpers',

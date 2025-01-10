@@ -34,6 +34,7 @@ export default defineFlatConfig([
       unicorn: unicornPlugin,
     },
     rules: {
+      'no-console': 'off',
       'import/exports-last': 'error',
       'import/extensions': ['error', { ts: 'always' }],
       'import/group-exports': 'error',

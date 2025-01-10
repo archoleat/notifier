@@ -5,7 +5,7 @@ import { truncate } from '#helpers/truncate/truncate.ts';
 
 import type { Parameters } from './parameters.ts';
 
-const notificationGenerator = async (parameters: Parameters) => {
+const notification = async (parameters: Parameters) => {
   const { message, title, hasTime } = parameters;
 
   const timestamp = hasTime ? `${chalk.gray(await currentTime())} ` : '';
@@ -15,4 +15,4 @@ const notificationGenerator = async (parameters: Parameters) => {
   return `${timestamp}[${upperCaseTitle}] ${text}`;
 };
 
-export { notificationGenerator };
+export { notification };
