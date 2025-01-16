@@ -1,17 +1,16 @@
 import { expect, describe, it, mock } from 'bun:test';
 import { error } from '#config/error.ts';
 import { LOG_LEVEL } from '#constants/log-level.ts';
-import type { NotificationMode } from '#types/notification-mode.ts';
-import type { TestCaseTypes } from './types/test-case.ts';
+import type { DefaultParametersTypes, TestCaseTypes } from './types/test-case.ts';
 
 mock.module('#utils/splitter/splitter.ts', () => ({
   splitter: mock((params) => JSON.stringify(params)),
 }));
 
 describe('error function', () => {
-  const defaultParams = {
+  const defaultParameters: DefaultParametersTypes = {
     hasTime: true,
-    notificationMode: 'console' as NotificationMode,
+    notificationMode: 'console',
     icon: LOG_LEVEL.ERROR,
     title: LOG_LEVEL.ERROR,
   };
@@ -20,19 +19,23 @@ describe('error function', () => {
     {
       description: 'should handle message with default parameters',
       input: { message: 'Test error message' },
-      expected: { message: 'Test error message', ...defaultParams },
+      expected: { message: 'Test error message', ...defaultParameters },
     },
     {
       description: 'should handle message with hasTime set to false',
       input: { message: 'Test error message', hasTime: false },
-      expected: { message: 'Test error message', ...defaultParams, hasTime: false },
+      expected: {
+        message: 'Test error message',
+        ...defaultParameters,
+        hasTime: false,
+      },
     },
     {
       description: 'should handle message with notificationMode set to desktop',
       input: { message: 'Test error message', notificationMode: 'desktop' },
       expected: {
         message: 'Test error message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'desktop',
       },
     },
@@ -41,7 +44,7 @@ describe('error function', () => {
       input: { message: 'Test error message', notificationMode: 'multiple' },
       expected: {
         message: 'Test error message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'multiple',
       },
     },
@@ -54,7 +57,7 @@ describe('error function', () => {
       },
       expected: {
         message: 'Test error message',
-        ...defaultParams,
+        ...defaultParameters,
         hasTime: false,
         notificationMode: 'desktop',
       },

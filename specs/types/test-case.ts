@@ -1,4 +1,12 @@
+import type { NotificationMode } from '#types/notification-mode.ts';
 import type { Parameters } from '#types/parameters.ts';
+
+type DefaultParametersTypes = {
+  hasTime: boolean;
+  notificationMode: NotificationMode;
+  icon: string;
+  title: string;
+};
 
 type TestCaseTypes = {
   description: string;
@@ -9,4 +17,4 @@ type TestCaseTypes = {
   };
 };
 
-export type { TestCaseTypes };
+export type { DefaultParametersTypes, TestCaseTypes };

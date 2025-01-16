@@ -1,17 +1,16 @@
 import { expect, describe, it, mock } from 'bun:test';
 import { success } from '#config/success.ts';
 import { LOG_LEVEL } from '#constants/log-level.ts';
-import type { NotificationMode } from '#types/notification-mode.ts';
-import type { TestCaseTypes } from './types/test-case.ts';
+import type { DefaultParametersTypes, TestCaseTypes } from './types/test-case.ts';
 
 mock.module('#utils/splitter/splitter.ts', () => ({
   splitter: mock((params) => JSON.stringify(params)),
 }));
 
 describe('success function', () => {
-  const defaultParams = {
+  const defaultParameters: DefaultParametersTypes = {
     hasTime: true,
-    notificationMode: 'console' as NotificationMode,
+    notificationMode: 'console',
     icon: LOG_LEVEL.SUCCESS,
     title: LOG_LEVEL.SUCCESS,
   };
@@ -20,14 +19,14 @@ describe('success function', () => {
     {
       description: 'should handle message with default parameters',
       input: { message: 'Test success message' },
-      expected: { message: 'Test success message', ...defaultParams },
+      expected: { message: 'Test success message', ...defaultParameters },
     },
     {
       description: 'should handle message with hasTime set to false',
       input: { message: 'Test success message', hasTime: false },
       expected: {
         message: 'Test success message',
-        ...defaultParams,
+        ...defaultParameters,
         hasTime: false,
       },
     },
@@ -36,7 +35,7 @@ describe('success function', () => {
       input: { message: 'Test success message', notificationMode: 'desktop' },
       expected: {
         message: 'Test success message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'desktop',
       },
     },
@@ -45,7 +44,7 @@ describe('success function', () => {
       input: { message: 'Test success message', notificationMode: 'multiple' },
       expected: {
         message: 'Test success message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'multiple',
       },
     },
@@ -58,7 +57,7 @@ describe('success function', () => {
       },
       expected: {
         message: 'Test success message',
-        ...defaultParams,
+        ...defaultParameters,
         hasTime: false,
         notificationMode: 'desktop',
       },

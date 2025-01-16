@@ -1,17 +1,16 @@
 import { expect, describe, it, mock } from 'bun:test';
-import { LOG_LEVEL } from '#constants/log-level.ts';
 import { warning } from '#config/warning.ts';
-import type { NotificationMode } from '#types/notification-mode.ts';
-import type { TestCaseTypes } from './types/test-case.ts';
+import { LOG_LEVEL } from '#constants/log-level.ts';
+import type { DefaultParametersTypes, TestCaseTypes } from './types/test-case.ts';
 
 mock.module('#utils/splitter/splitter.ts', () => ({
   splitter: mock((params) => JSON.stringify(params)),
 }));
 
 describe('warning function', () => {
-  const defaultParams = {
+  const defaultParameters: DefaultParametersTypes = {
     hasTime: true,
-    notificationMode: 'console' as NotificationMode,
+    notificationMode: 'console',
     icon: LOG_LEVEL.WARNING,
     title: LOG_LEVEL.WARNING,
   };
@@ -20,17 +19,14 @@ describe('warning function', () => {
     {
       description: 'should handle message with default parameters',
       input: { message: 'Test warning message' },
-      expected: {
-        message: 'Test warning message',
-        ...defaultParams,
-      },
+      expected: { message: 'Test warning message', ...defaultParameters },
     },
     {
       description: 'should handle message with hasTime set to false',
       input: { message: 'Test warning message', hasTime: false },
       expected: {
         message: 'Test warning message',
-        ...defaultParams,
+        ...defaultParameters,
         hasTime: false,
       },
     },
@@ -39,7 +35,7 @@ describe('warning function', () => {
       input: { message: 'Test warning message', notificationMode: 'desktop' },
       expected: {
         message: 'Test warning message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'desktop',
       },
     },
@@ -48,7 +44,7 @@ describe('warning function', () => {
       input: { message: 'Test warning message', notificationMode: 'multiple' },
       expected: {
         message: 'Test warning message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'multiple',
       },
     },
@@ -61,7 +57,7 @@ describe('warning function', () => {
       },
       expected: {
         message: 'Test warning message',
-        ...defaultParams,
+        ...defaultParameters,
         hasTime: false,
         notificationMode: 'desktop',
       },
