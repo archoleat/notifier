@@ -1,17 +1,16 @@
 import { expect, describe, it, mock } from 'bun:test';
 import { info } from '#config/info.ts';
 import { LOG_LEVEL } from '#constants/log-level.ts';
-import type { NotificationMode } from '#types/notification-mode.ts';
-import type { TestCaseTypes } from './types/test-case.ts';
+import type { DefaultParametersTypes, TestCaseTypes } from './types/test-case.ts';
 
 mock.module('#utils/splitter/splitter.ts', () => ({
   splitter: mock((params) => JSON.stringify(params)),
 }));
 
 describe('info function', () => {
-  const defaultParams = {
+  const defaultParameters: DefaultParametersTypes = {
     hasTime: true,
-    notificationMode: 'console' as NotificationMode,
+    notificationMode: 'console',
     icon: LOG_LEVEL.INFO,
     title: LOG_LEVEL.INFO,
   };
@@ -20,19 +19,23 @@ describe('info function', () => {
     {
       description: 'should handle message with default parameters',
       input: { message: 'Test info message' },
-      expected: { message: 'Test info message', ...defaultParams },
+      expected: { message: 'Test info message', ...defaultParameters },
     },
     {
       description: 'should handle message with hasTime set to false',
       input: { message: 'Test info message', hasTime: false },
-      expected: { message: 'Test info message', ...defaultParams, hasTime: false },
+      expected: {
+        message: 'Test info message',
+        ...defaultParameters,
+        hasTime: false,
+      },
     },
     {
       description: 'should handle message with notificationMode set to desktop',
       input: { message: 'Test info message', notificationMode: 'desktop' },
       expected: {
         message: 'Test info message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'desktop',
       },
     },
@@ -41,7 +44,7 @@ describe('info function', () => {
       input: { message: 'Test info message', notificationMode: 'multiple' },
       expected: {
         message: 'Test info message',
-        ...defaultParams,
+        ...defaultParameters,
         notificationMode: 'multiple',
       },
     },
@@ -54,7 +57,7 @@ describe('info function', () => {
       },
       expected: {
         message: 'Test info message',
-        ...defaultParams,
+        ...defaultParameters,
         hasTime: false,
         notificationMode: 'desktop',
       },

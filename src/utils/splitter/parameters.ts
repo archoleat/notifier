@@ -1,12 +1,8 @@
-import type { Message } from '#types/message.ts';
-import type { NotificationMode } from '#types/notification-mode.ts';
+import type { Parameters as Common } from '#types/parameters.ts';
 
-type Parameters = {
+type Parameters = Common & {
   icon: string;
   title: string;
-  message: Message;
-  hasTime?: boolean;
-  notificationMode?: NotificationMode;
 };
 
 export type { Parameters };
