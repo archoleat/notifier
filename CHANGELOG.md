@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.5](https://github.com/archoleat/notifier/compare/v1.1.4...v1.1.5) (2025-01-16)
+
+### Bug Fixes
+
+* checker ([#71](https://github.com/archoleat/notifier/issues/71)) ([62e8a77](https://github.com/archoleat/notifier/commit/62e8a77e633f3ce0a34b66b04cfd9708912dd789))
+
+### Code Refactoring
+
+* specs ([#72](https://github.com/archoleat/notifier/issues/72)) ([ec2a425](https://github.com/archoleat/notifier/commit/ec2a425c6a74be648a3ffc4b50b8991f16140738))
+
 ## [1.1.4](https://github.com/archoleat/notifier/compare/v1.1.3...v1.1.4) (2025-01-10)
 
 ### Bug Fixes
