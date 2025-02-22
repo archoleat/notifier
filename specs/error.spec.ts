@@ -1,6 +1,5 @@
 import { expect, describe, it, mock } from 'bun:test';
 import { error } from '#config/error.ts';
-import { LOG_LEVEL } from '#constants/log-level.ts';
 import type { DefaultParametersTypes, TestCaseTypes } from './types/test-case.ts';
 
 mock.module('#utils/splitter/splitter.ts', () => ({
@@ -11,8 +10,8 @@ describe('error function', () => {
   const defaultParameters: DefaultParametersTypes = {
     hasTime: true,
     notificationMode: 'console',
-    icon: LOG_LEVEL.ERROR,
-    title: LOG_LEVEL.ERROR,
+    icon: 'error',
+    title: 'error',
   };
 
   const testCases: TestCaseTypes[] = [
