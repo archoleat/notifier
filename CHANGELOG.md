@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.6](https://github.com/archoleat/notifier/compare/v1.1.5...v1.1.6) (2025-02-22)
+
+### Code Refactoring
+
+* error.ts ([4804983](https://github.com/archoleat/notifier/commit/4804983131a99849c6a83d5d83a53a3c3d909917))
+* ignore ([0259ccc](https://github.com/archoleat/notifier/commit/0259ccc65273c1d173edffba52bf6b55f125cf8b))
+* remove log-level ([#78](https://github.com/archoleat/notifier/issues/78)) ([541cebc](https://github.com/archoleat/notifier/commit/541cebc4473454d304893fec7ebbb2a8a572ca8b))
+
 ## [1.1.5](https://github.com/archoleat/notifier/compare/v1.1.4...v1.1.5) (2025-01-16)
 
 ### Bug Fixes
