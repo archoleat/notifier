@@ -15,7 +15,6 @@
     "moduleResolution": "NodeNext",
     "paths": {
       "#config/*": ["./src/config/*"],
-      "#constants/*": ["./src/data/constants/*"],
       "#helpers/*": ["./src/utils/helpers/*"],
       "#types/*": ["./src/data/types/*"],
       "#utils/*": ["./src/utils/*"]

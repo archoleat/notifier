@@ -9,7 +9,6 @@ import typescript from '@rollup/plugin-typescript';
 const destinationFolder = 'dist';
 const sourceFolder = 'src';
 const configFolder = `${sourceFolder}/config`;
-const constantsFolder = `${sourceFolder}/data/constants`;
 const iconsFolder = `${sourceFolder}/icons`;
 const typesFolder = `${sourceFolder}/data/types`;
 const utilsFolder = `${sourceFolder}/utils`;
@@ -43,10 +42,6 @@ export default defineConfig([
           {
             find: '#config',
             replacement: resolve(`${configFolder}/`),
-          },
-          {
-            find: '#constants',
-            replacement: resolve(`${constantsFolder}/`),
           },
           {
             find: '#helpers',

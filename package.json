@@ -32,7 +32,6 @@
   "types": "dist/index.d.ts",
   "imports": {
     "#config/*": "./src/config/*",
-    "#constants/*": "./src/data/constants/*",
     "#helpers/*": "./src/utils/helpers/*",
     "#src": "./src/*",
     "#types/*": "./src/data/types/*",
