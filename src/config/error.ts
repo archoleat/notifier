@@ -5,7 +5,7 @@ const error = async (parameters: Parameters) => {
   const { message, hasTime = true, notificationMode = 'console' } = parameters;
 
   return splitter({
-    message: `${message}!`,
+    message,
     hasTime,
     notificationMode,
     icon: 'error',
