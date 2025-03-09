@@ -1,6 +1,7 @@
-import { expect, describe, it, mock } from 'bun:test';
+import { describe, expect, test as spec, mock } from 'bun:test';
+
 import { error } from '#config/error.ts';
-import type { DefaultParametersTypes, TestCaseTypes } from './types/test-case.ts';
+import type { DefaultParametersTypes, TestCaseTypes } from '#types/test-case.ts';
 
 mock.module('#utils/splitter/splitter.ts', () => ({
   splitter: mock((params) => JSON.stringify(params)),
@@ -64,7 +65,7 @@ describe('error function', () => {
   ];
 
   testCases.forEach(({ description, input, expected }) => {
-    it(description, async () => {
+    spec(description, async () => {
       const result = await error(input);
 
       expect(JSON.parse(result)).toEqual(expected);
