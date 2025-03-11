@@ -8,11 +8,11 @@ mock.module('#utils/splitter/splitter.ts', () => ({
 }));
 
 const defaultParameters: DefaultParametersTypes = {
-    hasTime: true,
-    notificationMode: 'console',
-    icon: 'error',
-    title: 'error',
-  };
+  hasTime: true,
+  notificationMode: 'console',
+  icon: 'error',
+  title: 'error',
+};
 
 const testCases: TestCaseTypes[] = [
   {
