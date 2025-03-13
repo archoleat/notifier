@@ -64,11 +64,11 @@ const testCases: TestCaseTypes[] = [
 ];
 
 describe('info function', () => {
-  testCases.forEach(({ description, input, expected }) => {
+  for (const { description, input, expected } of testCases) {
     spec(description, async () => {
       const result = await info(input);
 
       expect(JSON.parse(result)).toEqual(expected);
     });
-  });
+  }
 });
