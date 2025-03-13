@@ -70,5 +70,5 @@ describe('info function', () => {
 
       expect(JSON.parse(result)).toEqual(expected);
     });
-  };
+  }
 });
