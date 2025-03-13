@@ -16,6 +16,8 @@
 - [Contributing](#contributing)
 - [License](#license)
 
+A small, simple and customizable notifier for your projects.
+
 ## Installation
 
 ```shell
