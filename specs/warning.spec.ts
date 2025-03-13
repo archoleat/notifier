@@ -70,5 +70,5 @@ describe('warning function', () => {
 
       expect(JSON.parse(result)).toEqual(expected);
     });
-  });
+  };
 });
