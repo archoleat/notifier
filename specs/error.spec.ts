@@ -64,7 +64,7 @@ const testCases: TestCaseTypes[] = [
 ];
 
 describe('error function', () => {
-  testCases.forEach(({ description, input, expected }) => {
+  for (const { description, input, expected } of testCases) {
     spec(description, async () => {
       const result = await error(input);
 
