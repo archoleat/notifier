@@ -31,11 +31,9 @@ import { error, info, success, warning } from '@archoleat/notifier';
 
 await info({
   message: 'string' | ['string', { maxLength: number }],
-  // Enable/disable timestamp, not work in desktop mode.
-  // @default true.
+  // Enable/disable timestamp, not work in desktop mode, @default true.
   hasTime: boolean,
-  // Available modes: console, desktop, multiple.
-  // @default 'console'.
+  // Available modes: console, desktop, multiple, @default 'console'.
   notificationMode: 'console' | 'desktop' | 'multiple',
 });
 ```
