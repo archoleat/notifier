@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.1.7](https://github.com/archoleat/notifier/compare/v1.1.6...v1.1.7) (2025-08-17)
+
+### Bug Fixes
+
+* error.spec.ts ([5805bf5](https://github.com/archoleat/notifier/commit/5805bf5f1815ea956bd26dc720ce6460335296f8))
+* error.spec.ts ([bfaf293](https://github.com/archoleat/notifier/commit/bfaf29301484fea0ba9f50fcc5fc1a7c24624a8f))
+* info.spec.ts ([500adb5](https://github.com/archoleat/notifier/commit/500adb50eb3dbe7f50d325942b1b1d62ccd672a9))
+* success.spec.ts ([268ffb6](https://github.com/archoleat/notifier/commit/268ffb632554c7866731271f922f0e30f5cc50f0))
+* tslib ([#118](https://github.com/archoleat/notifier/issues/118)) ([ba913c3](https://github.com/archoleat/notifier/commit/ba913c3389f87945774c98bcd579c334383335b4))
+* warning.spec.ts ([afa30d8](https://github.com/archoleat/notifier/commit/afa30d8e7719a2f2c61b4cea60eabc2e25af99a7))
+
+### Code Refactoring
+
+* .editorconfig-checker.json ([a523fc9](https://github.com/archoleat/notifier/commit/a523fc9fa95d4cf3732dc38c4b8b3f4f88929f40))
+* actions ([#117](https://github.com/archoleat/notifier/issues/117)) ([7de0a49](https://github.com/archoleat/notifier/commit/7de0a49416d0ada0a5504ab9d80fb9ec7f2ba6d0))
+* dependabot ([#111](https://github.com/archoleat/notifier/issues/111)) ([987127b](https://github.com/archoleat/notifier/commit/987127bacd396251daa81cdd8ea3488fb3562ff3))
+* error.spec.ts ([f3012e8](https://github.com/archoleat/notifier/commit/f3012e89ad5f3de86bd605c3aeee314cb03aed15))
+* error.spec.ts ([#85](https://github.com/archoleat/notifier/issues/85)) ([d06f153](https://github.com/archoleat/notifier/commit/d06f15395e40b2be4a06f13ce6780c9e196760e7))
+* info.spec.ts ([2de4b1f](https://github.com/archoleat/notifier/commit/2de4b1fb7eee913e5fd0113011916aa09f0e6dde))
+* info.spec.ts ([b77cdc5](https://github.com/archoleat/notifier/commit/b77cdc555279f4039de3cdc1b00ab42bb80f5bc4))
+* remove comments ([b815445](https://github.com/archoleat/notifier/commit/b815445dd2921269218482dcca65158974c0eb79))
+* success.spec.ts ([6336856](https://github.com/archoleat/notifier/commit/63368567ad62315f5b359f04500effd971344897))
+* success.spec.ts ([ea5dde9](https://github.com/archoleat/notifier/commit/ea5dde9b82c19170ec5d6ac7c1e58cbddf7cd2a3))
+* warning.spec.ts ([9afd294](https://github.com/archoleat/notifier/commit/9afd2948d2f83781ba7e0e8f82a3c8506cf92047))
+* warning.spec.ts ([550e38c](https://github.com/archoleat/notifier/commit/550e38cb6be8f912ec262d15375b8dc5bb2daccd))
+
+### Documentation
+
+* **readme:** rewrite ([ec3e6b9](https://github.com/archoleat/notifier/commit/ec3e6b9bf4683d4bc0562779904d280d05875004))
+
 ## [1.1.6](https://github.com/archoleat/notifier/compare/v1.1.5...v1.1.6) (2025-02-22)
 
 ### Code Refactoring
