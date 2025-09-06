@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "lib": ["DOM", "ESNext"],
+    "target": "ESNext",
+    "allowImportingTsExtensions": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "paths": {
+      "#config/*": ["./src/config/*"],
+      "#helpers/*": ["./src/utils/helpers/*"],
+      "#types/*": ["./src/data/types/*"],
+      "#utils/*": ["./src/utils/*"]
+    },
+    "rootDir": "src",
+    "types": ["chalk", "node"],
+    "disableReferencedProjectLoad": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true
+  },
+  "exclude": ["specs"],
+  "include": ["src"]
+}
