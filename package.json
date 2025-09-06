@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/notifier",
   "description": "A small, simple and customizable notifier for your projects",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",
