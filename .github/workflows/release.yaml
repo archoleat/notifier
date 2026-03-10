@@ -59,5 +59,4 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
         run: bun semantic-release
