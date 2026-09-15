@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.10](https://github.com/archoleat/notifier/compare/v1.1.9...v1.1.10) (2026-09-15)
+
+### Bug Fixes
+
+* **ci:** declare TypeScript and use client-id ([56ac73e](https://github.com/archoleat/notifier/commit/56ac73e14660029e932868919c89ab8e653a7c07))
+* **release:** use compatible changelog preset ([2a3aefa](https://github.com/archoleat/notifier/commit/2a3aefa20c44d090758a809630a220c79e8a78ea))
+
 ## [1.1.9](https://github.com/archoleat/notifier/compare/v1.1.8...v1.1.9) (2026-07-01)
 
 ### Bug Fixes
