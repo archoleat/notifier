@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.11](https://github.com/archoleat/notifier/compare/v1.1.10...v1.1.11) (2026-11-08)
+
+### Bug Fixes
+
+* resolve desktop icons relative to the ES module ([fb16781](https://github.com/archoleat/notifier/commit/fb16781297bd3f80ab49eee4efd4ed7542505e36))
+* use stable Node.js for releases ([209a86b](https://github.com/archoleat/notifier/commit/209a86b71dd453b6c9f39f7ae53fbfbb0820fb7e))
+
 ## [1.1.10](https://github.com/archoleat/notifier/compare/v1.1.9...v1.1.10) (2026-09-15)
 
 ### Bug Fixes
