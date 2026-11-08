@@ -1,4 +1,4 @@
-import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import Notifier from 'node-notifier';
 
@@ -10,7 +10,7 @@ const notifier = async (parameters: Parameters) => {
   const { icon, message, title } = parameters;
 
   return Notifier.notify({
-    icon: join(__dirname, 'icons', `${icon}.png`),
+    icon: fileURLToPath(new URL(`./icons/${icon}.png`, import.meta.url)),
     message: await truncate({ message }),
     title: title.toUpperCase(),
   });
