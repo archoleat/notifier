@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/notifier",
   "description": "Console and desktop notifications for Node.js scripts",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",

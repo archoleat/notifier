@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.14](https://github.com/archoleat/notifier/compare/v1.1.13...v1.1.14) (2026-11-09)
+
+### Bug Fixes
+
+* align npm keywords with repository topics ([3eba333](https://github.com/archoleat/notifier/commit/3eba333545ffe25e6c26b3150806b5f37af50fd6))
+
 ## [1.1.13](https://github.com/archoleat/notifier/compare/v1.1.12...v1.1.13) (2026-11-09)
 
 ### Bug Fixes
