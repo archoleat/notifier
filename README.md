@@ -12,11 +12,12 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Runtime](#runtime)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-A small, simple and customizable notifier for your projects.
+Console and desktop notifications for Node.js scripts.
 
 ## Installation
 
@@ -25,6 +26,14 @@ bun i @archoleat/notifier
 ```
 
 Use `bun i -D @archoleat/notifier` if only development scripts import it.
+
+## Runtime
+
+This ES module targets Node.js scripts, not browser notifications. It uses
+Node.js APIs and `node-notifier`; Bun is used for repository tooling and is
+not required to import the package in Node.js. Desktop delivery depends on
+the operating system and notification permissions. Automated fallback tests
+do not guarantee that a notification will be visible on every host.
 
 ## Usage
 

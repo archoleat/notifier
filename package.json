@@ -1,6 +1,6 @@
 {
   "name": "@archoleat/notifier",
-  "description": "A small, simple and customizable notifier for your projects",
+  "description": "Console and desktop notifications for Node.js scripts",
   "version": "1.1.12",
   "license": "MIT",
   "author": {
@@ -18,12 +18,13 @@
   },
   "keywords": [
     "archoleat",
-    "notifier",
+    "cli",
+    "console",
+    "desktop",
+    "nodejs",
+    "notifications",
     "typescript"
   ],
-  "engines": {
-    "bun": ">=1.0.0"
-  },
   "type": "module",
   "types": "dist/index.d.ts",
   "imports": {
