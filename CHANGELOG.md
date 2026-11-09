@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.13](https://github.com/archoleat/notifier/compare/v1.1.12...v1.1.13) (2026-11-09)
+
+### Bug Fixes
+
+* publish current documentation and runtime guidance ([f6fbc5b](https://github.com/archoleat/notifier/commit/f6fbc5b16e9b12701204421d77c7b2ef801b68fd))
+
+### Documentation
+
+* clarify usage and project constraints ([955c6d4](https://github.com/archoleat/notifier/commit/955c6d4e89a734de3d8b74ce25d736b41dc6f50b))
+
 ## [1.1.12](https://github.com/archoleat/notifier/compare/v1.1.11...v1.1.12) (2026-11-09)
 
 ### Bug Fixes
