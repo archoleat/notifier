@@ -1,7 +1,7 @@
 {
   "name": "@archoleat/notifier",
   "description": "Configurable console and desktop notifications for Node.js tools.",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "license": "MIT",
   "author": {
     "email": "nikkeyl.me@gmail.com",

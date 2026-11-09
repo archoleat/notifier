@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.15](https://github.com/archoleat/notifier/compare/v1.1.14...v1.1.15) (2026-11-09)
+
+### Bug Fixes
+
+* align package description with repository metadata ([03bfd6e](https://github.com/archoleat/notifier/commit/03bfd6e2ff7fc0b230e133040fd82df87c423bba))
+
 ## [1.1.14](https://github.com/archoleat/notifier/compare/v1.1.13...v1.1.14) (2026-11-09)
 
 ### Bug Fixes
