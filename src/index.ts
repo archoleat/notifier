@@ -1,4 +1,4 @@
-export { error } from '#config/error.ts';
-export { info } from '#config/info.ts';
-export { success } from '#config/success.ts';
-export { warning } from '#config/warning.ts';
+export { error } from '#config/error.js';
+export { info } from '#config/info.js';
+export { success } from '#config/success.js';
+export { warning } from '#config/warning.js';

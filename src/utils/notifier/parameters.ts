@@ -1,4 +1,4 @@
-import type { Message } from '#types/message.ts';
+import type { Message } from '#types/message.js';
 
 type Parameters = {
   icon: string;

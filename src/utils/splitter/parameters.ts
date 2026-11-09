@@ -1,4 +1,4 @@
-import type { Parameters as Common } from '#types/parameters.ts';
+import type { Parameters as Common } from '#types/parameters.js';
 
 type Parameters = Common & {
   icon: string;

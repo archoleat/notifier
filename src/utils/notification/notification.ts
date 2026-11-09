@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 
-import { currentTime } from '#helpers/current-time.ts';
-import { truncate } from '#helpers/truncate/truncate.ts';
+import { currentTime } from '#helpers/current-time.js';
+import { truncate } from '#helpers/truncate/truncate.js';
 
 import type { Parameters } from './parameters.ts';
 

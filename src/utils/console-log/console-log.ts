@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-import { notification } from '#utils/notification/notification.ts';
+import { notification } from '#utils/notification/notification.js';
 
 import type { Parameters } from './parameters.ts';
 
