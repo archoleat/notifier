@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.12](https://github.com/archoleat/notifier/compare/v1.1.11...v1.1.12) (2026-11-09)
+
+### Bug Fixes
+
+* support native macOS notifications without Rosetta ([84950e3](https://github.com/archoleat/notifier/commit/84950e36fd19bea087f8d9aebe2c72cd7a086e20))
+
 ## [1.1.11](https://github.com/archoleat/notifier/compare/v1.1.10...v1.1.11) (2026-11-08)
 
 ### Bug Fixes
