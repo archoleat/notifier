@@ -38,6 +38,10 @@ await info({
 });
 ```
 
+On macOS without Rosetta, desktop notifications fall back to the system
+notification service. This fallback uses the host application's notification
+permissions and does not display custom icons.
+
 ## Contributing
 
 Please read [**CONTRIBUTING**](https://github.com/archoleat/.github/blob/main/CONTRIBUTING.md)
